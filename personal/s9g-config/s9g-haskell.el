@@ -24,7 +24,19 @@
 
 ;;; Code:
 
+(require 'haskell-mode)
 
+(defun s9g-cabal-mode-hook ()
+  (local-set-key (kbd "<f5>") 'haskell-compile))
+
+(defun s9g-haskell-mode-!hook ()
+  (local-set-key (kbd "<f5>") 'haskell-compile))
+
+(add-hook
+ 'haskell-cabal-mode-hook 's9g-cabal-mode-hook)
+
+(add-hook
+ 'haskell-mode-hook 's9g-haskell-mode-hook)
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here
