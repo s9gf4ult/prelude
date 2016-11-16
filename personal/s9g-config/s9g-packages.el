@@ -1,5 +1,4 @@
-;;; s9g-defuns.el --- global usefull defuns not assigned to some mode
-;;; or something -*- lexical-binding: t; -*-
+;;; s9g-packages.el --- install required packages    -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016
 
@@ -25,6 +24,13 @@
 
 ;;; Code:
 
+(prelude-require-package 'neotree)
 
-(provide 's9g-defuns)
-;;; s9g-defuns.el ends here
+(prelude-require-package 'framemove)
+(require 'framemove)
+(windmove-default-keybindings)
+(setq framemove-hook-into-windmove t)
+
+
+(provide 's9g-packages)
+;;; s9g-packages.el ends here

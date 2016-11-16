@@ -27,9 +27,8 @@
 (require 's9g-override)
 (require 's9g-defuns)
 
-(global-set-key (kbd "<S-left>") 's9g-windmove-left)
-(global-set-key (kbd "<S-right>") 's9g-windmove-right)
 (global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
+(global-set-key (kbd "<f12>") 'neotree-toggle)
 
 (provide 's9g-globals)
 ;;; s9g-globals.el ends here

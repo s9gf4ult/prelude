@@ -28,8 +28,12 @@
 (add-to-list 'load-path (expand-file-name "s9g-config" prelude-personal-dir))
 
 (require 's9g-override)
+(require 's9g-packages)
+(require 's9g-modes)
 (require 's9g-globals)
-(require 's9g-haskell)
+
+
+(desktop-save-mode 1)
 
 (provide 's9g-config)
 ;;; s9g-config.el ends here

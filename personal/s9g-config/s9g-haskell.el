@@ -24,7 +24,6 @@
 
 ;;; Code:
 
-(customize-set-variable 'haskell-compile-cabal-build-command "cd %s && stack build --fast")
 
 
 (provide 's9g-haskell)

@@ -1,5 +1,4 @@
-;;; s9g-defuns.el --- global usefull defuns not assigned to some mode
-;;; or something -*- lexical-binding: t; -*-
+;;; s9g-modes.el --- load and configure required modes  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016
 
@@ -25,6 +24,7 @@
 
 ;;; Code:
 
+(require 's9g-haskell)
 
-(provide 's9g-defuns)
-;;; s9g-defuns.el ends here
+(provide 's9g-modes)
+;;; s9g-modes.el ends here
