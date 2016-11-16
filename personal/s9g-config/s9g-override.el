@@ -24,8 +24,8 @@
 
 ;;; Code:
 
-
-(recentf-mode -1)
+;; Because fuck you!
+(define-key prelude-mode-map (kbd "C-c s") nil)
 
 (loop
  for from across "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖ\ЭЯЧСМИТЬБЮ№"

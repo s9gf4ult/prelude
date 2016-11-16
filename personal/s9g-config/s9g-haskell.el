@@ -24,16 +24,40 @@
 
 ;;; Code:
 
+
 (require 'haskell-mode)
+(require 'neotree)
+
+(defun s9g-haskell-compile (&optional alt)
+  (interactive "P")
+  (save-some-buffers t)
+  (if alt
+      (haskell-compile '-)
+    (haskell-compile)))
+
+(defun haskell-neotree-open-proj ()
+  (interactive)
+  (if (neo-global--window-exists-p)
+      (neotree-hide)
+    (neo-global--open-dir (haskell-cabal-find-dir))))
 
 (defun s9g-cabal-mode-hook ()
-  (local-set-key (kbd "<f5>") 'haskell-compile))
-
-(defun s9g-haskell-mode-!hook ()
-  (local-set-key (kbd "<f5>") 'haskell-compile))
+  (local-set-key (kbd "<f5>") 's9g-haskell-compile)
+  (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj))
 
 (add-hook
  'haskell-cabal-mode-hook 's9g-cabal-mode-hook)
+
+(defun s9g-haskell-mode-hook ()
+  (local-set-key (kbd "<f5>") 's9g-haskell-compile)
+  (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj)
+  (local-set-key
+   (kbd "<f9>")
+   #'(lambda ()
+       (interactive)
+       (haskell-cabal-visit-file t)))
+  (local-set-key (kbd "C-c s") 'haskell-sort-imports)
+  (local-set-key (kbd "M-p") 'haskell-navigate-imports))
 
 (add-hook
  'haskell-mode-hook 's9g-haskell-mode-hook)
