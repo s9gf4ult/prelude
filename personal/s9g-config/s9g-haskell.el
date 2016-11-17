@@ -24,9 +24,19 @@
 
 ;;; Code:
 
-
 (require 'haskell-mode)
 (require 'neotree)
+(require 'yasnippet)
+(require 'haskell-snippets)
+
+(defun haskell-end-of-line-and-indent (arg)
+  (interactive "p")
+  (end-of-line)
+  (let ((lines (or arg
+                   1)))
+    (dotimes (none lines)
+      (haskell-indentation-newline-and-indent))))
+
 
 (defun s9g-haskell-compile (&optional alt)
   (interactive "P")
@@ -49,6 +59,7 @@
  'haskell-cabal-mode-hook 's9g-cabal-mode-hook)
 
 (defun s9g-haskell-mode-hook ()
+  (yas-minor-mode 1)
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
   (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj)
   (local-set-key
@@ -57,7 +68,11 @@
        (interactive)
        (haskell-cabal-visit-file t)))
   (local-set-key (kbd "C-c s") 'haskell-sort-imports)
-  (local-set-key (kbd "M-p") 'haskell-navigate-imports))
+  (local-set-key (kbd "M-p") 'haskell-navigate-imports)
+  (local-set-key (kbd "<S-return>") 'haskell-end-of-line-and-indent)
+  (local-set-key (kbd "<M-S-up>") 'move-text-up)
+  (local-set-key (kbd "<M-S-down>") 'move-text-down)
+  )
 
 (add-hook
  'haskell-mode-hook 's9g-haskell-mode-hook)

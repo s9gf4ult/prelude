@@ -31,6 +31,11 @@
 (windmove-default-keybindings)
 (setq framemove-hook-into-windmove t)
 
+(prelude-require-package 'yasnippet)
+(prelude-require-package 'haskell-snippets)
+
+(prelude-require-packages '(fit-frame frame-fns misc-fns))
+(require 'compile+)
 
 (provide 's9g-packages)
 ;;; s9g-packages.el ends here

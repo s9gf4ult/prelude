@@ -25,6 +25,24 @@
 
 ;;; Code:
 
+(defun delete-horizontal-and-surround-space ()
+  (interactive)
+  (delete-horizontal-space)
+  (insert " ")
+  (save-excursion
+    (insert " ")))
+
+
+(defun comment-dwim-line (&optional arg)
+  "Replacement for the comment-dwim command.
+        If no region is selected and current line is not blank and we are not at the end of the line,
+        then comment current line.
+        Replaces default behaviour of comment-dwim, when it inserts comment at the end of the line."
+  (interactive "*P")
+  (comment-normalize-vars)
+  (if (not (region-active-p))
+      (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+    (comment-dwim arg)))
 
 (provide 's9g-defuns)
 ;;; s9g-defuns.el ends here

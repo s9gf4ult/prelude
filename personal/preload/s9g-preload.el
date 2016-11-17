@@ -1,4 +1,4 @@
-;;; s9g-globals.el --- global hotkeys defined here   -*- lexical-binding: t; -*-
+;;; s9g-preload.el --- preload some modules          -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016
 
@@ -24,19 +24,5 @@
 
 ;;; Code:
 
-(require 's9g-override)
-(require 's9g-defuns)
-
-(global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
-(global-set-key (kbd "<f12>") 'neotree-toggle)
-(global-set-key (kbd "<f7>") 'helm-mini)
-(global-set-key (kbd "<f8>") 'projectile-find-file)
-
-(global-set-key (kbd "C-S-c") 'copy-region-as-kill)
-(global-set-key (kbd "M-\\") 'delete-horizontal-and-surround-space)
-(global-set-key (kbd "C-j") 'join-line)
-(global-set-key (kbd "C-S-j") 'crux-top-join-line)
-(global-set-key (kbd "C-;") 'comment-dwim-line)
-
-(provide 's9g-globals)
-;;; s9g-globals.el ends here
+(provide 's9g-preload)
+;;; s9g-preload.el ends here
