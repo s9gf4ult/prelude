@@ -52,5 +52,28 @@
                      (region-end))
     (kill-whole-line lines-count)))
 
+(defun split-window-sensibly-reversed (&optional window)
+  "Same as split-window-sensibly but with reversed logic about
+  horizontal/vertical split."
+  (let ((window (or window (selected-window))))
+    (or (and (window-splittable-p window t)
+             ;; Split window horizontally.
+             (with-selected-window window
+               (split-window-right)))
+        (and (window-splittable-p window)
+             ;; Split window vertically.
+             (with-selected-window window
+               (split-window-below)))
+        (and (eq window (frame-root-window (window-frame window)))
+             (not (window-minibuffer-p window))
+             ;; If WINDOW is the only window on its frame and is not the
+             ;; minibuffer window, try to split it vertically disregarding
+             ;; the value of `split-height-threshold'.
+             (let ((split-height-threshold 0))
+               (when (window-splittable-p window)
+                 (with-selected-window window
+                   (split-window-below))))))))
+
+
 (provide 's9g-defuns)
 ;;; s9g-defuns.el ends here
