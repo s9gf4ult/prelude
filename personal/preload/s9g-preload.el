@@ -24,5 +24,7 @@
 
 ;;; Code:
 
+(setq prelude-theme nil)
+
 (provide 's9g-preload)
 ;;; s9g-preload.el ends here

@@ -37,6 +37,7 @@
 (global-set-key (kbd "C-j") 'join-line)
 (global-set-key (kbd "C-S-j") 'crux-top-join-line)
 (global-set-key (kbd "C-;") 'comment-dwim-line)
+(global-set-key (kbd "C-S-k") 'kill-line-or-region)
 
 (provide 's9g-globals)
 ;;; s9g-globals.el ends here

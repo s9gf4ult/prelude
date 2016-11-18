@@ -37,5 +37,9 @@
 (prelude-require-packages '(fit-frame frame-fns misc-fns))
 (require 'compile+)
 
+;; (prelude-require-package 'color-theme)
+;; (require 'color-theme)
+;; (load-theme 'xemacs)
+
 (provide 's9g-packages)
 ;;; s9g-packages.el ends here

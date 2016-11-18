@@ -44,5 +44,13 @@
       (comment-or-uncomment-region (line-beginning-position) (line-end-position))
     (comment-dwim arg)))
 
+(defun kill-line-or-region (&optional lines-count)
+  "Kill whole line if region is not selected. Kill region otherwise."
+  (interactive "p")
+  (if mark-active
+      (delete-region (region-beginning)
+                     (region-end))
+    (kill-whole-line lines-count)))
+
 (provide 's9g-defuns)
 ;;; s9g-defuns.el ends here
