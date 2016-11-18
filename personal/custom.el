@@ -13,7 +13,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "paratype" :family "PT Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "1ASC" :family "Liberation Mono"))))
  '(cursor ((t (:background "OrangeRed2"))))
  '(diff-added ((t (:foreground "green4"))))
  '(diff-context ((t (:inherit shadow :foreground "gray32"))))
