@@ -11,6 +11,20 @@
  '(haskell-compile-cabal-build-command "cd %s && stack build --fast --ghc-options=-ferror-spans")
  '(helm-etags-execute-action-at-once-if-one nil)
  '(helm-split-window-preferred-function (quote split-window-sensibly-reversed))
+ '(org-capture-templates
+   (quote
+    (("t" "Todo sometime" entry
+      (file+headline "~/pers/refile.org" "Tasks")
+      (file "~/.emacs.d/personal/org-templates/todo")
+      :prepend t)
+     ("s" "Scheduled todo item" entry
+      (file+headline "~/pers/refile.org" "Tasks")
+      (file "~/.emacs.d/personal/org-templates/scheduled")
+      :prepend t)
+     ("n" "Note" entry
+      (file+headline "~/pers/refile.org" "Notes")
+      (file "~/.emacs.d/personal/org-templates/note")
+      :prepend t))))
  '(org-default-notes-file "~/pers/refile.org")
  '(org-reverse-note-order t)
  '(recentf-mode nil)
