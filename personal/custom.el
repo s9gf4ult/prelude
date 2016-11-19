@@ -11,6 +11,7 @@
  '(haskell-compile-cabal-build-command "cd %s && stack build --fast --ghc-options=-ferror-spans")
  '(helm-etags-execute-action-at-once-if-one nil)
  '(helm-split-window-preferred-function (quote split-window-sensibly-reversed))
+ '(magit-commit-show-diff nil)
  '(org-capture-templates
    (quote
     (("t" "Todo sometime" entry
