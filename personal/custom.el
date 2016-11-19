@@ -11,6 +11,8 @@
  '(haskell-compile-cabal-build-command "cd %s && stack build --fast --ghc-options=-ferror-spans")
  '(helm-etags-execute-action-at-once-if-one nil)
  '(helm-split-window-preferred-function (quote split-window-sensibly-reversed))
+ '(org-default-notes-file "~/pers/refile.org")
+ '(org-reverse-note-order t)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
  '(split-height-threshold 30)

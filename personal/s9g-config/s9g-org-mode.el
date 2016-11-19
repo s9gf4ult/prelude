@@ -1,4 +1,4 @@
-;;; s9g-modes.el --- load and configure required modes  -*- lexical-binding: t; -*-
+;;; s9g-org-mode.el --- org mode configuration       -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016
 
@@ -24,8 +24,18 @@
 
 ;;; Code:
 
-(require 's9g-haskell)
-(require 's9g-org-mode)
+(require 'org)
 
-(provide 's9g-modes)
-;;; s9g-modes.el ends here
+
+(defun s9g-org-hook ()
+  (auto-fill-mode 1)
+  (local-set-key (kbd "<S-left>") #'windmove-left)
+  (local-set-key (kbd "<S-right>") #'windmove-right)
+  (local-set-key (kbd "<S-up>") #'windmove-up)
+  (local-set-key (kbd "<S-down>") #'windmove-down))
+
+(add-hook
+ 'org-mode-hook 's9g-org-hook)
+
+(provide 's9g-org-mode)
+;;; s9g-org-mode.el ends here
