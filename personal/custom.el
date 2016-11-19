@@ -21,6 +21,10 @@
       (file+headline "~/pers/refile.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/scheduled")
       :prepend t)
+     ("c" "Code linked todo" entry
+      (file+headline "~/pers/refile.org" "Tasks")
+      (file "~/.emacs.d/personal/org-templates/code")
+      :prepend t)
      ("n" "Note" entry
       (file+headline "~/pers/refile.org" "Notes")
       (file "~/.emacs.d/personal/org-templates/note")
