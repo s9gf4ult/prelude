@@ -25,6 +25,9 @@
       (file+headline "~/pers/refile.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/code")
       :prepend t)
+     ("l" "Learn something" entry
+      (file+headline "~/pers/refile.org" "Learn")
+      (file "~/.emacs.d/personal/org-templates/learn"))
      ("n" "Note" entry
       (file+headline "~/pers/refile.org" "Notes")
       (file "~/.emacs.d/personal/org-templates/note")
