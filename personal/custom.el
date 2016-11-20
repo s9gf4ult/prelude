@@ -6,11 +6,10 @@
  '(display-buffer-alist
    (quote
     ((".*"
-      (display-buffer-reuse-window display-buffer-pop-up-window display-buffer-use-some-window)
+      (display-buffer-reuse-window display-buffer-pop-up-window-all-frames display-buffer-use-some-window)
       (reusable-frames . t)))))
  '(haskell-compile-cabal-build-command "cd %s && stack build --fast --ghc-options=-ferror-spans")
  '(helm-etags-execute-action-at-once-if-one nil)
- '(helm-split-window-preferred-function (quote split-window-sensibly-reversed))
  '(magit-commit-show-diff nil)
  '(org-capture-templates
    (quote
@@ -34,8 +33,8 @@
  '(org-reverse-note-order t)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
- '(split-height-threshold 30)
- '(split-width-threshold 80)
+ '(split-height-threshold nil)
+ '(split-width-threshold 100)
  '(split-window-preferred-function (quote split-window-sensibly-reversed)))
 
 (custom-set-faces
@@ -76,4 +75,5 @@
  '(vc-annotate-face-3F3FFF ((t (:foreground "#3F3FFF"))))
  '(warning ((t (:foreground "medium violet red" :weight bold))))
  '(whitespace-empty ((t nil)))
+ '(whitespace-tab ((t (:background "gainsboro"))))
  '(whitespace-trailing ((t nil))))

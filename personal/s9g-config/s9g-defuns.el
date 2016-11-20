@@ -25,6 +25,24 @@
 
 ;;; Code:
 
+(defun display-buffer-pop-up-window-all-frames (buffer alist)
+  "Display BUFFER by popping up new window in any frame.
+Cycles over all available frames and call
+`display-buffer-pop-up-window' in each frame, returns first
+non-nil result.  ALIST is passed down to
+`display-buffer-pop-up-window'"
+  (let* ((curr-frame (selected-frame))
+         (frames (cons curr-frame (remove curr-frame (frame-list)))))
+    (or (loop for frame in frames do
+              (select-frame frame)
+              (let ((ret (display-buffer-pop-up-window buffer alist)))
+                (when ret (return ret))))
+        (progn
+          (select-frame curr-frame)     ; select originally selected
+                                        ; frame to save editor's state
+          '()))
+    ))
+
 (defun delete-horizontal-and-surround-space ()
   (interactive)
   (delete-horizontal-space)
