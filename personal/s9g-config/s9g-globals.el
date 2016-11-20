@@ -27,17 +27,19 @@
 (require 's9g-override)
 (require 's9g-defuns)
 
-(global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
 (global-set-key (kbd "<f12>") 'neotree-toggle)
 (global-set-key (kbd "<f7>") 'helm-mini)
 (global-set-key (kbd "<f8>") 'projectile-find-file)
 
+(global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
 (global-set-key (kbd "C-S-c") 'copy-region-as-kill)
 (global-set-key (kbd "M-\\") 'delete-horizontal-and-surround-space)
 (global-set-key (kbd "C-j") 'join-line)
 (global-set-key (kbd "C-S-j") 'crux-top-join-line)
 (global-set-key (kbd "C-;") 'comment-dwim-line)
 (global-set-key (kbd "C-S-k") 'kill-line-or-region)
+
+(global-set-key (kbd "C-c c") 'org-capture)
 
 (provide 's9g-globals)
 ;;; s9g-globals.el ends here
