@@ -25,6 +25,12 @@
 
 ;;; Code:
 
+(defun display-buffer-and-raise (buffer &optional action frame)
+  (let ((window (display-buffer buffer action frame)))
+    (when window
+      (select-window window)
+      (select-frame-set-input-focus (window-frame window)))))
+
 (defun display-buffer-pop-up-window-all-frames (buffer alist)
   "Display BUFFER by popping up new window in any frame.
 Cycles over all available frames and call
