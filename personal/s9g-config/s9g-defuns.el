@@ -25,6 +25,14 @@
 
 ;;; Code:
 
+(defun s9g-indent-up ()
+  (interactive)
+  (indent-by 1))
+
+(defun s9g-indent-down ()
+  (interactive)
+  (indent-by -1))
+
 (defun display-buffer-and-raise (buffer &optional action frame)
   (let ((window (display-buffer buffer action frame)))
     (when window

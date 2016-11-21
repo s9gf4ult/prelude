@@ -39,6 +39,9 @@
 (global-set-key (kbd "C-;") 'comment-dwim-line)
 (global-set-key (kbd "C-S-k") 'kill-line-or-region)
 
+(global-set-key (kbd "<C-tab>") #'s9g-indent-up)
+(global-set-key (kbd "<C-S-iso-lefttab>") #'s9g-indent-down)
+
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (provide 's9g-globals)

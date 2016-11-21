@@ -37,6 +37,10 @@
     (dotimes (none lines)
       (haskell-indentation-newline-and-indent))))
 
+(defun s9g-haskell-set-buffer-name ()
+  (let ((modname (haskell-guess-module-name)))
+    (unless (string-equal "" modname)
+      (rename-buffer modname t))))
 
 (defun s9g-haskell-compile (&optional alt)
   (interactive "P")
@@ -72,6 +76,7 @@
   (local-set-key (kbd "<S-return>") 'haskell-end-of-line-and-indent)
   (local-set-key (kbd "<M-S-up>") 'move-text-up)
   (local-set-key (kbd "<M-S-down>") 'move-text-down)
+  (s9g-haskell-set-buffer-name)
   )
 
 (add-hook

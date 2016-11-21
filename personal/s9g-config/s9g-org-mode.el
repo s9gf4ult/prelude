@@ -32,7 +32,9 @@
   (local-set-key (kbd "<S-left>") #'windmove-left)
   (local-set-key (kbd "<S-right>") #'windmove-right)
   (local-set-key (kbd "<S-up>") #'windmove-up)
-  (local-set-key (kbd "<S-down>") #'windmove-down))
+  (local-set-key (kbd "<S-down>") #'windmove-down)
+  (local-set-key (kbd "<M-S-return>") 'org-insert-todo-heading-respect-content)
+  )
 
 (add-hook
  'org-mode-hook 's9g-org-hook)
