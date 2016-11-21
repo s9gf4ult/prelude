@@ -5,12 +5,16 @@
  ;; If there is more than one, they won't work right.
  '(display-buffer-alist
    (quote
-    ((".*"
+    (("\\*NeoTree\\*" ignore
+      (nil))
+     (".*"
       (display-buffer-reuse-window display-buffer-pop-up-window-all-frames display-buffer-use-some-window)
       (reusable-frames . t)))))
  '(haskell-compile-cabal-build-command "cd %s && stack build --fast --ghc-options=-ferror-spans")
  '(helm-etags-execute-action-at-once-if-one nil)
  '(magit-commit-show-diff nil)
+ '(org-agenda-todo-ignore-timestamp (quote all))
+ '(org-agenda-todo-ignore-with-date t)
  '(org-capture-templates
    (quote
     (("t" "Todo sometime" entry
