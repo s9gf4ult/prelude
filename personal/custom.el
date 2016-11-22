@@ -5,7 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(display-buffer-alist
    (quote
-    (("\\*NeoTree\\*" ignore
+    (("\\*magit-commit-popup\\*" ignore
+      (nil))
+     ("\\*NeoTree\\*" ignore
       (nil))
      (".*"
       (display-buffer-reuse-window display-buffer-pop-up-window-all-frames display-buffer-use-some-window)
