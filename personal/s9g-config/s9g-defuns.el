@@ -25,6 +25,27 @@
 
 ;;; Code:
 
+(defun indent-by (ind &optional beg end)
+  (interactive)
+  (when (or (and beg end) (region-active-p))
+    (let* ((deactivate-mark)
+           (beg (or beg (region-beginning)))
+           (end (or end (region-end)))
+           (mark-after (region-active-p))
+           (bline (line-number-at-pos beg))
+           (eline (line-number-at-pos end)))
+      (flet ((getlinepos (line)
+                         (save-excursion
+                           (goto-line line)
+                           (beginning-of-line)
+                           (point))))
+        (indent-rigidly (getlinepos bline)
+                        (getlinepos eline) ind)
+        (when mark-after
+          (push-mark (getlinepos bline))
+          (goto-char (getlinepos eline))
+          (activate-mark))))))
+
 (defun s9g-indent-up ()
   (interactive)
   (indent-by 1))
