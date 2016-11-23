@@ -37,6 +37,8 @@
 (prelude-require-packages '(fit-frame frame-fns misc-fns))
 (require 'compile+)
 
+(prelude-require-package 'nginx-mode)
+
 ;; (prelude-require-package 'color-theme)
 ;; (require 'color-theme)
 ;; (load-theme 'xemacs)

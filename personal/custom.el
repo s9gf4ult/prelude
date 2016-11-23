@@ -5,7 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(display-buffer-alist
    (quote
-    (("\\*magit-.*-popup\\*" ignore
+    (("\\*helm.*\\*" ignore
+      (nil))
+     ("\\*magit-.*-popup\\*" ignore
       (nil))
      ("\\*NeoTree\\*" ignore
       (nil))
@@ -44,7 +46,8 @@
  '(scroll-bar-mode nil)
  '(split-height-threshold nil)
  '(split-width-threshold 100)
- '(split-window-preferred-function (quote split-window-sensibly-reversed)))
+ '(split-window-preferred-function (quote split-window-sensibly-reversed))
+ '(woman-fill-frame t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
