@@ -5,7 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(display-buffer-alist
    (quote
-    (("\\*helm.*\\*" ignore
+    (("widget-choose" ignore
+      (nil))
+     ("\\*helm.*\\*" ignore
       (nil))
      ("\\*magit-.*-popup\\*" ignore
       (nil))
@@ -24,27 +26,36 @@
  '(org-agenda-todo-ignore-with-date t)
  '(org-capture-templates
    (quote
-    (("t" "Todo sometime" entry
+    (("t" "Todo prefix")
+     ("tt" "Todo sometime" entry
       (file+headline "~/pers/refile.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
-     ("s" "Scheduled todo item" entry
+     ("ts" "Scheduled todo item" entry
       (file+headline "~/pers/refile.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/scheduled")
       :prepend t)
-     ("c" "Code linked todo" entry
+     ("tc" "Code linked todo" entry
       (file+headline "~/pers/refile.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/code")
       :prepend t)
-     ("l" "Learn something" entry
-      (file+headline "~/pers/refile.org" "Learn")
-      (file "~/.emacs.d/personal/org-templates/learn"))
+     ("r" "Read something" entry
+      (file+headline "~/pers/todo/read.org" "Read")
+      (file "~/.emacs.d/personal/org-templates/learn")
+      :prepend t)
      ("n" "Note" entry
-      (file+headline "~/pers/refile.org" "Notes")
+      (file+headline "~/pers/info/notes.org" "Notes")
       (file "~/.emacs.d/personal/org-templates/note")
-      :prepend t))))
+      :prepend t)
+     ("l" "Log entry")
+     ("ll" "Simple log entry" entry
+      (file+datetree "~/pers/log/day.org")
+      "* %?")
+     ("lh" "Health log" entry
+      (file+datetree "~/pers/log/hlog.org")
+      "* %?"))))
  '(org-default-notes-file "~/pers/refile.org")
- '(org-refile-targets (quote (("~/pers/todo/life.org" :tag . ":life:"))))
+ '(org-refile-targets (quote (("~/pers/todo/life.org" :level . 1))))
  '(org-reverse-note-order t)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
