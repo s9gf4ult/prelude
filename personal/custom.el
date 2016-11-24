@@ -55,7 +55,14 @@
       (file+datetree "~/pers/log/hlog.org")
       "* %?"))))
  '(org-default-notes-file "~/pers/refile.org")
- '(org-refile-targets (quote (("~/pers/todo/life.org" :level . 1))))
+ '(org-refile-targets
+   (quote
+    (("~/pers/todo/life.org" :level . 1)
+     ("~/pers/todo/ebay.org" :regexp . "Buy")
+     ("~/projects/emacs/emacs.org" :level . 1)
+     ("~/projects/contractor/contractor.org" :level . 1)
+     ("~/pers/todo/read.org" :level . 1)
+     ("~/pers/todo/pool.org" :level . 1))))
  '(org-reverse-note-order t)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
