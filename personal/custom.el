@@ -17,6 +17,9 @@
  '(haskell-compile-cabal-build-command "cd %s && stack build --fast --ghc-options=-ferror-spans")
  '(helm-etags-execute-action-at-once-if-one nil)
  '(magit-commit-show-diff nil)
+ '(magit-diff-arguments
+   (quote
+    ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
  '(org-agenda-todo-ignore-timestamp (quote all))
  '(org-agenda-todo-ignore-with-date t)
  '(org-capture-templates
@@ -41,6 +44,7 @@
       (file "~/.emacs.d/personal/org-templates/note")
       :prepend t))))
  '(org-default-notes-file "~/pers/refile.org")
+ '(org-refile-targets (quote (("~/pers/todo/life.org" :tag . ":life:"))))
  '(org-reverse-note-order t)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)

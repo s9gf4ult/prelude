@@ -25,6 +25,15 @@
 
 ;;; Code:
 
+;; kill buffers which file does not exists
+(defun s9g-kill-orphan-buffers ()
+  (interactive)
+  (loop for buf in (buffer-list) do
+        (let ((bfn (buffer-file-name buf)))
+          (if (and bfn
+                   (not (file-exists-p bfn)))
+              (kill-buffer buf)))))
+
 (defun indent-by (ind &optional beg end)
   (interactive)
   (when (or (and beg end) (region-active-p))
