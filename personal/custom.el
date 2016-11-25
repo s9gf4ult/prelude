@@ -22,6 +22,9 @@
  '(magit-diff-arguments
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
+ '(org-agenda-files
+   (quote
+    ("~/pers/todo/life.org" "~/projects/contractor/contractor.org" "~/projects/emacs/emacs.org")))
  '(org-agenda-todo-ignore-timestamp (quote all))
  '(org-agenda-todo-ignore-with-date t)
  '(org-capture-templates
@@ -38,6 +41,14 @@
      ("tc" "Code linked todo" entry
       (file+headline "~/pers/refile.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/code")
+      :prepend t)
+     ("tp" "Pool todo" entry
+      (file+headline "~/pers/todo/pool.org" "Pool")
+      (file "~/.emacs.d/personal/org-templates/todo")
+      :prepend t)
+     ("tl" "Life todo" entry
+      (file+headline "~/pers/todo/life.org" "Tasks")
+      (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
      ("r" "Read something" entry
       (file+headline "~/pers/todo/read.org" "Read")
