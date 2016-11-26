@@ -34,6 +34,12 @@
   (local-set-key (kbd "<S-up>") #'windmove-up)
   (local-set-key (kbd "<S-down>") #'windmove-down)
   (local-set-key (kbd "<M-S-return>") 'org-insert-todo-heading-respect-content)
+  (local-set-key (kbd "<C-left>") 'org-metaleft)
+  (local-set-key (kbd "<C-right>") 'org-metaright)
+  (local-set-key (kbd "<C-S-left>") 'org-shiftmetaleft)
+  (local-set-key (kbd "<C-S-right>") 'org-shiftmetaright)
+  (local-set-key (kbd "<M-left>") 'left-word)
+  (local-set-key (kbd "<M-right>") 'right-word)
   )
 
 (add-hook
