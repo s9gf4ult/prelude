@@ -39,6 +39,9 @@
 
 (prelude-require-package 'nginx-mode)
 
+(prelude-require-package 'monky)
+;; (prelude-require-package 'intero)
+
 ;; (prelude-require-package 'color-theme)
 ;; (require 'color-theme)
 ;; (load-theme 'xemacs)

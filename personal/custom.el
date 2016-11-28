@@ -50,6 +50,10 @@
       (file+headline "~/pers/todo/life.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
+     ("te" "Emacs todo" entry
+      (file+headline "~/projects/emacs/emacs.org" "Tasks")
+      (file "~/.emacs.d/personal/org-templates/todo")
+      :prepend t)
      ("r" "Read something" entry
       (file+headline "~/pers/todo/read.org" "Read")
       (file "~/.emacs.d/personal/org-templates/learn")
