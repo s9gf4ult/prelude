@@ -29,7 +29,7 @@
 
 (global-set-key (kbd "<f12>") 'neotree-toggle)
 (global-set-key (kbd "<f7>") 'helm-mini)
-(global-set-key (kbd "<f8>") 'projectile-find-file)
+(global-set-key (kbd "<f8>") 'helm-projectile)
 
 (global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
 (global-set-key (kbd "C-S-c") 'copy-region-as-kill)
@@ -41,6 +41,7 @@
 
 (global-set-key (kbd "<C-tab>") #'s9g-indent-up)
 (global-set-key (kbd "<C-S-iso-lefttab>") #'s9g-indent-down)
+(global-set-key (kbd "C-c h x") 'helm-do-ag-project-root)
 
 (global-set-key (kbd "C-c c") 'org-capture)
 

@@ -76,6 +76,7 @@
   (local-set-key (kbd "<S-return>") 'haskell-end-of-line-and-indent)
   (local-set-key (kbd "<M-S-up>") 'move-text-up)
   (local-set-key (kbd "<M-S-down>") 'move-text-down)
+  (local-set-key (kbd "M-.") 'helm-etags-select)
   (s9g-haskell-set-buffer-name)
   )
 
