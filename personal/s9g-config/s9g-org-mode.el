@@ -40,6 +40,10 @@
   (local-set-key (kbd "<C-S-right>") 'org-shiftmetaright)
   (local-set-key (kbd "<M-left>") 'left-word)
   (local-set-key (kbd "<M-right>") 'right-word)
+  (local-set-key (kbd "<M-up>") 'org-backward-paragraph)
+  (local-set-key (kbd "<M-down>") 'org-forward-paragraph)
+  (local-set-key (kbd "<C-up>") 'org-metaup)
+  (local-set-key (kbd "<C-down>") 'org-metadown)
   )
 
 (add-hook

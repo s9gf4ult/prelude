@@ -3,6 +3,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(dabbrev-case-distinction nil)
+ '(dabbrev-case-fold-search nil)
+ '(dabbrev-case-replace nil)
+ '(dabbrev-upcase-means-case-search t)
  '(display-buffer-alist
    (quote
     (("widget-choose" ignore
@@ -16,7 +20,11 @@
      (".*"
       (display-buffer-reuse-window display-buffer-pop-up-window-all-frames display-buffer-use-some-window)
       (reusable-frames . t)))))
- '(haskell-compile-cabal-build-command "cd %s && stack build --fast --ghc-options=-ferror-spans")
+ '(flycheck-ghc-language-extensions
+   (quote
+    ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
+ '(haskell-compile-cabal-build-command "stack build %s --fast --ghc-options=-ferror-spans")
+ '(helm-ag-insert-at-point 'word)
  '(helm-etags-execute-action-at-once-if-one nil)
  '(magit-commit-show-diff nil)
  '(magit-diff-arguments
@@ -81,6 +89,7 @@
  '(org-reverse-note-order t)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
+ '(sp-escape-wrapped-region nil)
  '(split-height-threshold nil)
  '(split-width-threshold 100)
  '(split-window-preferred-function (quote split-window-sensibly-reversed))
