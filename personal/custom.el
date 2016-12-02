@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-insert-mode t)
+ '(company-dabbrev-downcase nil)
  '(dabbrev-case-distinction nil)
  '(dabbrev-case-fold-search nil)
  '(dabbrev-case-replace nil)
@@ -23,8 +25,9 @@
  '(flycheck-ghc-language-extensions
    (quote
     ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
- '(haskell-compile-cabal-build-command "stack build %s --fast --ghc-options=-ferror-spans")
- '(helm-ag-insert-at-point 'word)
+ '(haskell-compile-cabal-build-command
+   "stack build $(basename %s) --fast --ghc-options=-ferror-spans")
+ '(helm-ag-insert-at-point (quote word))
  '(helm-etags-execute-action-at-once-if-one nil)
  '(magit-commit-show-diff nil)
  '(magit-diff-arguments
