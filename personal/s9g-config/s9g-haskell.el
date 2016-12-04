@@ -28,7 +28,7 @@
 (require 'neotree)
 (require 'yasnippet)
 (require 'haskell-snippets)
-(require 'intero)
+;; (require 'intero)
 
 (defun haskell-end-of-line-and-indent (arg)
   (interactive "p")
@@ -83,9 +83,6 @@
 
 (add-hook
  'haskell-mode-hook 's9g-haskell-mode-hook)
-
-(add-hook
- 'haskell-mode-hook 'intero-mode-whitelist)
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here
