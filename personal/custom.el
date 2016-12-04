@@ -29,6 +29,9 @@
    "stack build $(basename %s) --fast --ghc-options=-ferror-spans")
  '(helm-ag-insert-at-point (quote word))
  '(helm-etags-execute-action-at-once-if-one nil)
+ '(intero-whitelist
+   (quote
+    ("/mnt/st4000/home/razor/work/redozubov/contractor/b2b/backend")))
  '(magit-commit-show-diff nil)
  '(magit-diff-arguments
    (quote

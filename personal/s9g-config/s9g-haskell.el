@@ -28,6 +28,7 @@
 (require 'neotree)
 (require 'yasnippet)
 (require 'haskell-snippets)
+(require 'intero)
 
 (defun haskell-end-of-line-and-indent (arg)
   (interactive "p")
@@ -76,11 +77,15 @@
   (local-set-key (kbd "<S-return>") 'haskell-end-of-line-and-indent)
   (local-set-key (kbd "<M-S-up>") 'move-text-up)
   (local-set-key (kbd "<M-S-down>") 'move-text-down)
+  (haskell-indentation-mode +1)
   (s9g-haskell-set-buffer-name)
   )
 
 (add-hook
  'haskell-mode-hook 's9g-haskell-mode-hook)
+
+(add-hook
+ 'haskell-mode-hook 'intero-mode-whitelist)
 
 (provide 's9g-haskell)
 ;;; s9g-haskell.el ends here

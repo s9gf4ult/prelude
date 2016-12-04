@@ -41,7 +41,7 @@
 
 (prelude-require-package 'monky)
 (prelude-require-package 'ag)
-;; (prelude-require-package 'intero)
+(prelude-require-package 'intero)
 
 ;; (prelude-require-package 'color-theme)
 ;; (require 'color-theme)
