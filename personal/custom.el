@@ -87,7 +87,11 @@
       :prepend t)
      ("bm" "Buy maybe sometime" entry
       (file+headline "~/pers/todo/buy.org" "Maybe")
-      (file "~/.emacs.d/personal/org-templates/note")))))
+      (file "~/.emacs.d/personal/org-templates/note"))
+     ("u" "Url" entry
+      (file+headline "~/pers/info/urls.org" "Urls")
+      (file "~/.emacs.d/personal/org-templates/url")
+      :prepend t))))
  '(org-default-notes-file "~/pers/refile.org")
  '(org-refile-targets
    (quote
