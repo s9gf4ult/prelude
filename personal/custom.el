@@ -78,11 +78,14 @@
       :prepend t)
      ("l" "Log entry")
      ("ll" "Simple log entry" entry
-      (file+datetree "~/pers/log/day.org")
+      (file+datetree "~/pers/log/log.org")
       "* %?")
      ("lh" "Health log" entry
       (file+datetree "~/pers/log/hlog.org")
       "* %?")
+     ("lm" "Mother log" entry
+      (file+datetree "~/pers/log/mother.org")
+      "* %? ")
      ("b" "Buy something")
      ("bb" "Buy must have" entry
       (file+headline "~/pers/todo/buy.org" "Must have")
