@@ -79,12 +79,20 @@
       "* %?")
      ("lh" "Health log" entry
       (file+datetree "~/pers/log/hlog.org")
-      "* %?"))))
+      "* %?")
+     ("b" "Buy something")
+     ("bb" "Buy must have" entry
+      (file+headline "~/pers/todo/buy.org" "Must have")
+      (file "~/.emacs.d/personal/org-templates/note")
+      :prepend t)
+     ("bm" "Buy maybe sometime" entry
+      (file+headline "~/pers/todo/buy.org" "Maybe")
+      (file "~/.emacs.d/personal/org-templates/note")))))
  '(org-default-notes-file "~/pers/refile.org")
  '(org-refile-targets
    (quote
     (("~/pers/todo/life.org" :level . 1)
-     ("~/pers/todo/ebay.org" :regexp . "Buy")
+     ("~/pers/todo/buy.org" :level . 1)
      ("~/projects/emacs/emacs.org" :level . 1)
      ("~/projects/contractor/contractor.org" :level . 1)
      ("~/pers/todo/read.org" :level . 1)
