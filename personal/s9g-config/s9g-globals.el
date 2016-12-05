@@ -42,6 +42,7 @@
 (global-set-key (kbd "<C-tab>") #'s9g-indent-up)
 (global-set-key (kbd "<C-S-iso-lefttab>") #'s9g-indent-down)
 (global-set-key (kbd "C-c h x") 'helm-do-ag-project-root)
+(global-set-key (kbd "C-c j") 'avy-goto-word-1)
 
 (global-set-key (kbd "C-c c") 'org-capture)
 

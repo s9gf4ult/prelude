@@ -20,7 +20,7 @@
      ("\\*NeoTree\\*" ignore
       (nil))
      (".*"
-      (display-buffer-reuse-window display-buffer-pop-up-window-all-frames display-buffer-use-some-window)
+      (display-buffer-reuse-window display-buffer-pop-up-window display-buffer-use-some-window)
       (reusable-frames . t)))))
  '(flycheck-ghc-language-extensions
    (quote
