@@ -99,6 +99,7 @@
       (file "~/.emacs.d/personal/org-templates/url")
       :prepend t))))
  '(org-default-notes-file "~/pers/refile.org")
+ '(org-extend-today-until 5)
  '(org-refile-targets
    (quote
     (("~/pers/todo/life.org" :level . 1)
