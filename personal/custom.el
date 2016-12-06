@@ -26,7 +26,7 @@
    (quote
     ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
  '(haskell-compile-cabal-build-command
-   "stack build $(basename %s) --fast --ghc-options=-ferror-spans")
+   "stack test $(basename %s) --fast --ghc-options=-ferror-spans --no-run-tests")
  '(helm-ag-insert-at-point (quote word))
  '(helm-etags-execute-action-at-once-if-one nil)
  '(intero-whitelist
