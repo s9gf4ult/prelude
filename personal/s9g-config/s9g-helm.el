@@ -1,4 +1,4 @@
-;;; s9g-packages.el --- install required packages    -*- lexical-binding: t; -*-
+;;; s9g-helm.el ---                                  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016
 
@@ -24,30 +24,10 @@
 
 ;;; Code:
 
-(prelude-require-package 'neotree)
+(require 'helm)
 
-(prelude-require-package 'framemove)
-(require 'framemove)
-(windmove-default-keybindings)
-(setq framemove-hook-into-windmove t)
+(define-key helm-etags-map (kbd "<C-return>") 'helm-etags-run-switch-other-window)
+(define-key helm-map (kbd "<C-return>") 'helm-buffer-switch-other-window)
 
-(prelude-require-package 'yasnippet)
-(prelude-require-package 'haskell-snippets)
-
-(prelude-require-packages '(fit-frame frame-fns misc-fns))
-(require 'compile+)
-
-(prelude-require-package 'nginx-mode)
-
-(prelude-require-package 'monky)
-(prelude-require-package 'ag)
-
-(prelude-require-package 'helm-dash)
-;; (prelude-require-package 'intero)
-
-;; (prelude-require-package 'color-theme)
-;; (require 'color-theme)
-;; (load-theme 'xemacs)
-
-(provide 's9g-packages)
-;;; s9g-packages.el ends here
+(provide 's9g-helm)
+;;; s9g-helm.el ends here

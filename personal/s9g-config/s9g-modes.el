@@ -26,6 +26,7 @@
 
 (require 's9g-yasnippet)
 (require 's9g-org-mode)
+(require 's9g-helm)
 (require 's9g-haskell)
 
 (provide 's9g-modes)

@@ -45,6 +45,7 @@
 (global-set-key (kbd "C-c h g") 'helm-do-ag)
 (global-set-key (kbd "C-c j") 'avy-goto-word-1)
 (global-set-key (kbd "M-/") 'helm-dabbrev)
+(global-set-key (kbd "C-c l") 'locate-key-binding)
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
