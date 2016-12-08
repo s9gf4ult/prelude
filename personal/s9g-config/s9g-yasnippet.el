@@ -1,4 +1,4 @@
-;;; s9g-modes.el --- load and configure required modes  -*- lexical-binding: t; -*-
+;;; s9g-yasnippet.el ---                             -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2016
 
@@ -24,9 +24,15 @@
 
 ;;; Code:
 
-(require 's9g-yasnippet)
-(require 's9g-org-mode)
-(require 's9g-haskell)
+;; Turn on snippets
+(require 'yasnippet)
+(yas-global-mode t)
 
-(provide 's9g-modes)
-;;; s9g-modes.el ends here
+;; Remove Yasnippet's default tab key binding
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+;; Set Yasnippet's key binding to shift+tab
+(define-key yas-minor-mode-map (kbd "<M-tab>") 'yas-expand)
+
+(provide 's9g-yasnippet)
+;;; s9g-yasnippet.el ends here
