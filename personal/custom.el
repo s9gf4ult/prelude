@@ -60,19 +60,19 @@
       (file "~/.emacs.d/personal/org-templates/code")
       :prepend t)
      ("tp" "Pool todo" entry
-      (file+headline "~/pers/todo/pool.org" "Pool")
+      (file+headline "~/pers/todo/life/pool.org" "Pool")
       (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
      ("tl" "Life todo" entry
-      (file+headline "~/pers/todo/life.org" "Tasks")
+      (file+headline "~/pers/todo/life/life.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
      ("te" "Emacs todo" entry
-      (file+headline "~/projects/emacs/emacs.org" "Tasks")
+      (file+headline "~/pers/todo/emacs/emacs.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
      ("r" "Read something" entry
-      (file+headline "~/pers/todo/read.org" "Read")
+      (file+headline "~/pers/todo/life/read.org" "Read")
       (file "~/.emacs.d/personal/org-templates/learn")
       :prepend t)
      ("n" "Note" entry
@@ -91,12 +91,13 @@
       "* %? ")
      ("b" "Buy something")
      ("bb" "Buy must have" entry
-      (file+headline "~/pers/todo/buy.org" "Must have")
+      (file+headline "~/pers/todo/life/buy.org" "Must have")
       (file "~/.emacs.d/personal/org-templates/note")
       :prepend t)
      ("bm" "Buy maybe sometime" entry
-      (file+headline "~/pers/todo/buy.org" "Maybe")
-      (file "~/.emacs.d/personal/org-templates/note"))
+      (file+headline "~/pers/todo/life/buy.org" "Maybe")
+      (file "~/.emacs.d/personal/org-templates/note")
+      :prepend t)
      ("u" "Url" entry
       (file+headline "~/pers/info/urls.org" "Urls")
       (file "~/.emacs.d/personal/org-templates/url")
@@ -105,12 +106,14 @@
  '(org-extend-today-until 5)
  '(org-refile-targets
    (quote
-    (("~/pers/todo/life.org" :level . 1)
-     ("~/pers/todo/buy.org" :level . 1)
-     ("~/projects/emacs/emacs.org" :level . 1)
-     ("~/projects/contractor/contractor.org" :level . 1)
-     ("~/pers/todo/read.org" :level . 1)
-     ("~/pers/todo/pool.org" :level . 1))))
+    (("~/pers/todo/life/life.org" :level . 1)
+     ("~/pers/todo/life/buy.org" :level . 1)
+     ("~/pers/todo/emacs/emacs.org" :level . 1)
+     ("~/pers/todo/contractor/contractor.org" :level . 1)
+     ("~/pers/todo/life/read.org" :level . 1)
+     ("~/pers/todo/life/pool.org" :level . 1)
+     ("~/pers/todo/haskell/haskell.org" :level . 1)
+     ("~/pers/todo/computer/computer.org" :maxlevel . 1))))
  '(org-reverse-note-order t)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
