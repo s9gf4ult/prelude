@@ -117,6 +117,7 @@
      ("~/pers/projects/haskell/pgq.org" :level . 1)
      ("~/pers/projects/haskell/pgt.org" :level . 1))))
  '(org-reverse-note-order t)
+ '(prelude-auto-save nil)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
  '(sp-escape-wrapped-region nil)
