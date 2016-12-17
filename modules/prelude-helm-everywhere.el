@@ -46,7 +46,6 @@
 (global-set-key (kbd "C-h f") 'helm-apropos)
 (global-set-key (kbd "C-h r") 'helm-info-emacs)
 (global-set-key (kbd "C-h C-l") 'helm-locate-library)
-(define-key prelude-mode-map (kbd "C-c f") 'helm-recentf)
 
 (define-key minibuffer-local-map (kbd "C-c C-l") 'helm-minibuffer-history)
 
