@@ -48,32 +48,20 @@
    (quote
     (("t" "Todo prefix")
      ("tt" "Todo sometime" entry
-      (file+headline "~/pers/refile.org" "Tasks")
+      (file+headline "~/pers/capture.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
      ("ts" "Scheduled todo item" entry
-      (file+headline "~/pers/refile.org" "Tasks")
+      (file+headline "~/pers/capture.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/scheduled")
       :prepend t)
      ("tc" "Code linked todo" entry
-      (file+headline "~/pers/refile.org" "Tasks")
+      (file+headline "~/pers/capture.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/code")
       :prepend t)
-     ("tp" "Pool todo" entry
-      (file+headline "~/pers/projects/life/todo/pool.org" "Pool")
-      (file "~/.emacs.d/personal/org-templates/todo")
-      :prepend t)
-     ("tl" "Life todo" entry
-      (file+headline "~/pers/projects/life/todo/life.org" "Tasks")
-      (file "~/.emacs.d/personal/org-templates/todo")
-      :prepend t)
-     ("te" "Emacs todo" entry
-      (file+headline "~/pers/projects/emacs/emacs.org" "Tasks")
-      (file "~/.emacs.d/personal/org-templates/todo")
-      :prepend t)
-     ("r" "Read something" entry
-      (file+headline "~/pers/projects/life/todo/read.org" "Read")
-      (file "~/.emacs.d/personal/org-templates/learn")
+     ("tu" "Url assigned todo" entry
+      (file+headline "~/pers/capture.org" "Tasks")
+      (file "~/.emacs.d/personal/org-templates/urltodo")
       :prepend t)
      ("n" "Note" entry
       (file+headline "~/pers/projects/life/info/notes.org" "Notes")
@@ -84,22 +72,13 @@
       (file+datetree "~/pers/projects/life/log/log.org")
       "* %?")
      ("lh" "Health log" entry
-      (file+datetree "~/pers/projects/life/log/hlog.org")
+      (file+datetree "~/pers/projects/life/log/health.org")
       "* %?")
      ("lm" "Mother log" entry
       (file+datetree "~/pers/projects/life/log/mother.org")
       "* %? ")
-     ("b" "Buy something")
-     ("bb" "Buy must have" entry
-      (file+headline "~/pers/projects/life/todo/buy.org" "Must have")
-      (file "~/.emacs.d/personal/org-templates/note")
-      :prepend t)
-     ("bm" "Buy maybe sometime" entry
-      (file+headline "~/pers/projects/life/todo/buy.org" "Maybe")
-      (file "~/.emacs.d/personal/org-templates/note")
-      :prepend t)
      ("u" "Url" entry
-      (file+headline "~/pers/projects/life/info/urls.org" "Urls")
+      (file+headline "~/pers/urls.org" "Urls")
       (file "~/.emacs.d/personal/org-templates/url")
       :prepend t))))
  '(org-default-notes-file "~/pers/refile.org")
@@ -124,6 +103,9 @@
  '(split-height-threshold nil)
  '(split-width-threshold 100)
  '(split-window-preferred-function (quote split-window-sensibly-reversed))
+ '(tags-table-list
+   (quote
+    ("/home/razor/tmp/yesod/TAGS" "/mnt/st4000/home/razor/tmp/yesod/TAGS")))
  '(woman-fill-frame t))
 
 (custom-set-faces
