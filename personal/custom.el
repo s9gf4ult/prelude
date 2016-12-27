@@ -25,6 +25,8 @@
  '(flycheck-ghc-language-extensions
    (quote
     ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
+ '(haskell-compile-cabal-build-alt-command
+   "stack test $(basename %s) --fast --ghc-options=-ferror-spans --ghc-options=Werror --no-run-tests")
  '(haskell-compile-cabal-build-command
    "stack test $(basename %s) --fast --ghc-options=-ferror-spans --no-run-tests")
  '(helm-ag-insert-at-point (quote word))
@@ -86,10 +88,10 @@
  '(org-refile-targets
    (quote
     (("~/pers/projects/life/todo/life.org" :level . 1)
-     ("~/pers/pool.org" :level . 1)
-     ("~/pers/projects/life/todo/read.org" :level . 1)
      ("~/pers/projects/instruments/instruments.org" :level . 1)
      ("~/pers/projects/typeableio/typeableio.org" :level . 1)
+     ("~/pers/projects/life/todo/read.org" :level . 1)
+     ("~/pers/pool.org" :level . 1)
      ("~/pers/projects/haskell/haskell.org" :level . 1))))
  '(org-reverse-note-order t)
  '(prelude-auto-save nil)
