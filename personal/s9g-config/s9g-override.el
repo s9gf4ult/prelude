@@ -35,6 +35,5 @@
  (eval `(define-key key-translation-map (kbd ,(concat "M-" (string from))) (kbd ,(concat "M-" (string to)))))
  (eval `(define-key key-translation-map (kbd ,(concat "C-M-" (string from))) (kbd ,(concat "C-M-" (string to))))))
 
-
 (provide 's9g-override)
 ;;; s9g-override.el ends here

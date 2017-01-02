@@ -79,6 +79,7 @@
   (local-set-key (kbd "<M-S-down>") 'move-text-down)
   (haskell-indentation-mode +1)
   (s9g-haskell-set-buffer-name)
+  (sp-pair "'" nil :actions :rem)
   )
 
 (add-hook
