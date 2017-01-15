@@ -31,7 +31,10 @@
    "stack test $(basename %s) --fast --ghc-options=-ferror-spans --no-run-tests")
  '(helm-ag-insert-at-point (quote word))
  '(helm-autoresize-mode t)
+ '(helm-buffer-details-flag nil)
+ '(helm-buffer-max-length 80)
  '(helm-etags-execute-action-at-once-if-one nil)
+ '(helm-turn-on-recentf nil)
  '(intero-whitelist
    (quote
     ("/mnt/st4000/home/razor/work/redozubov/contractor/b2b/backend")))
