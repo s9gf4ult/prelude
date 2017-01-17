@@ -34,6 +34,9 @@
  '(helm-buffer-details-flag nil)
  '(helm-buffer-max-length 80)
  '(helm-etags-execute-action-at-once-if-one nil)
+ '(helm-mini-default-sources
+   (quote
+    (helm-source-buffers-list helm-source-buffer-not-found)))
  '(helm-turn-on-recentf nil)
  '(intero-whitelist
    (quote
