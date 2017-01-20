@@ -43,6 +43,8 @@
 (prelude-require-package 'ag)
 
 (prelude-require-package 'helm-dash)
+
+(prelude-require-package 'flycheck-haskell)
 ;; (prelude-require-package 'intero)
 
 ;; (prelude-require-package 'color-theme)
