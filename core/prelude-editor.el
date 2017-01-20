@@ -1,6 +1,6 @@
 ;;; prelude-editor.el --- Emacs Prelude: enhanced core editing experience.
 ;;
-;; Copyright © 2011-2016 Bozhidar Batsov
+;; Copyright © 2011-2017 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
@@ -127,24 +127,24 @@
 (savehist-mode +1)
 
 ;; save recent files
-;; (require 'recentf)
-;; (setq recentf-save-file (expand-file-name "recentf" prelude-savefile-dir)
-;;       recentf-max-saved-items 500
-;;       recentf-max-menu-items 15
-;;       ;; disable recentf-cleanup on Emacs start, because it can cause
-;;       ;; problems with remote files
-;;       recentf-auto-cleanup 'never)
+(require 'recentf)
+(setq recentf-save-file (expand-file-name "recentf" prelude-savefile-dir)
+      recentf-max-saved-items 500
+      recentf-max-menu-items 15
+      ;; disable recentf-cleanup on Emacs start, because it can cause
+      ;; problems with remote files
+      recentf-auto-cleanup 'never)
 
-;; (defun prelude-recentf-exclude-p (file)
-;;   "A predicate to decide whether to exclude FILE from recentf."
-;;   (let ((file-dir (file-truename (file-name-directory file))))
-;;     (-any-p (lambda (dir)
-;;               (string-prefix-p dir file-dir))
-;;             (mapcar 'file-truename (list prelude-savefile-dir package-user-dir)))))
+(defun prelude-recentf-exclude-p (file)
+  "A predicate to decide whether to exclude FILE from recentf."
+  (let ((file-dir (file-truename (file-name-directory file))))
+    (-any-p (lambda (dir)
+              (string-prefix-p dir file-dir))
+            (mapcar 'file-truename (list prelude-savefile-dir package-user-dir)))))
 
-;; (add-to-list 'recentf-exclude 'prelude-recentf-exclude-p)
+(add-to-list 'recentf-exclude 'prelude-recentf-exclude-p)
 
-;; (recentf-mode +1)
+(recentf-mode +1)
 
 ;; use shift + arrow keys to switch between visible buffers
 (require 'windmove)
@@ -430,6 +430,10 @@ and file 'filename' will be opened and cursor set on line 'linenumber'"
                                (cons (string-to-number (match-string 2 name))
                                      (string-to-number (or (match-string 3 name) ""))))
                             fn))) files)))
+
+;; use settings from .editorconfig file when present
+(require 'editorconfig)
+(editorconfig-mode 1)
 
 (provide 'prelude-editor)
 
