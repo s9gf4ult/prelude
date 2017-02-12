@@ -107,9 +107,7 @@
  '(split-height-threshold nil)
  '(split-width-threshold 100)
  '(split-window-preferred-function (quote split-window-sensibly-reversed))
- '(tags-table-list
-   (quote
-    ("/home/razor/tmp/yesod/TAGS" "/mnt/st4000/home/razor/tmp/yesod/TAGS")))
+ '(tags-table-list nil)
  '(woman-fill-frame t))
 
 (custom-set-faces
