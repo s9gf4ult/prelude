@@ -47,6 +47,8 @@
  '(magit-diff-arguments
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
+ '(midnight-hook nil)
+ '(midnight-mode t nil (midnight))
  '(org-agenda-files
    (quote
     ("~/pers/todo/life.org" "~/projects/contractor/contractor.org" "~/projects/emacs/emacs.org")))
