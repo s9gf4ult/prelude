@@ -47,6 +47,7 @@
  '(magit-diff-arguments
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
+ '(nxml-child-indent 2)
  '(org-agenda-files
    (quote
     ("~/pers/todo/life.org" "~/projects/contractor/contractor.org" "~/projects/emacs/emacs.org")))
