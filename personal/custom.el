@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
+ '(clean-buffer-list-delay-general 30)
  '(company-dabbrev-downcase nil)
  '(dabbrev-case-distinction nil)
  '(dabbrev-case-fold-search nil)
@@ -47,8 +48,7 @@
  '(magit-diff-arguments
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
- '(midnight-hook nil)
- '(midnight-mode nil nil (midnight))
+ '(midnight-mode t nil (midnight))
  '(nxml-child-indent 2)
  '(org-agenda-files
    (quote
