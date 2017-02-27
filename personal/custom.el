@@ -47,6 +47,8 @@
  '(magit-diff-arguments
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
+ '(midnight-hook nil)
+ '(midnight-mode t nil (midnight))
  '(nxml-child-indent 2)
  '(org-agenda-files
    (quote

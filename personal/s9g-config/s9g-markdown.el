@@ -1,9 +1,9 @@
-;;; s9g-modes.el --- load and configure required modes  -*- lexical-binding: t; -*-
+;;; s9g-markdown.el ---                              -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2016
+;; Copyright (C) 2017
 
 ;; Author:  <razor@localhost.localdomain>
-;; Keywords:
+;; Keywords: emulations
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,11 +24,14 @@
 
 ;;; Code:
 
-(require 's9g-yasnippet)
-(require 's9g-org-mode)
-(require 's9g-helm)
-(require 's9g-haskell)
-(require 's9g-markdown)
+(add-hook
+ 'markdown-mode-hook
+ (lambda ()
+   (local-set-key (kbd "<M-left>") 'left-word)
+   (local-set-key (kbd "<M-right>") 'right-word)
+   (local-set-key (kbd "<C-left>") 'markdown-promote)
+   (local-set-key (kbd "<C-right>") 'markdown-demote)
+   ))
 
-(provide 's9g-modes)
-;;; s9g-modes.el ends here
+(provide 's9g-markdown)
+;;; s9g-markdown.el ends here
