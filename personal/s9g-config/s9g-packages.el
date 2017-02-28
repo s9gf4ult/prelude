@@ -33,6 +33,7 @@
 
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'haskell-snippets)
+(prelude-require-package 'hyai)
 
 (prelude-require-packages '(fit-frame frame-fns misc-fns))
 (require 'compile+)

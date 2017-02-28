@@ -39,6 +39,7 @@
    (quote
     (helm-source-buffers-list helm-source-buffer-not-found)))
  '(helm-turn-on-recentf nil)
+ '(hyai-basic-offset 2)
  '(intero-whitelist
    (quote
     ("/mnt/st4000/home/razor/work/redozubov/contractor/b2b/backend")))

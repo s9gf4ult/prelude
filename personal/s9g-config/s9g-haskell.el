@@ -28,6 +28,7 @@
 (require 'neotree)
 (require 'yasnippet)
 (require 'haskell-snippets)
+(require 'hyai)
 ;; (require 'intero)
 
 (defun haskell-end-of-line-and-indent (arg)
@@ -65,6 +66,7 @@
 
 (defun s9g-haskell-mode-hook ()
   (yas-minor-mode 1)
+  (hyai-mode)
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
   (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj)
   (local-set-key
