@@ -34,6 +34,7 @@
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'haskell-snippets)
 (prelude-require-package 'hyai)
+(prelude-require-package 'flycheck-haskell)
 
 (prelude-require-packages '(fit-frame frame-fns misc-fns))
 (require 'compile+)
@@ -45,8 +46,7 @@
 
 (prelude-require-package 'helm-dash)
 
-(prelude-require-package 'flycheck-haskell)
-;; (prelude-require-package 'intero)
+(prelude-require-package 'web-mode)
 
 ;; (prelude-require-package 'color-theme)
 ;; (require 'color-theme)
