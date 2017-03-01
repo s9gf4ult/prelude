@@ -151,6 +151,7 @@
  '(region ((t (:background "gray61" :distant-foreground "gtk_selection_fg_color"))))
  '(vc-annotate-face-3F3FFF ((t (:foreground "#3F3FFF"))))
  '(warning ((t (:foreground "medium violet red" :weight bold))))
+ '(web-mode-doctype-face ((t (:foreground "black"))))
  '(web-mode-html-attr-name-face ((t (:foreground "blue4"))))
  '(web-mode-html-tag-face ((t (:foreground "RoyalBlue4"))))
  '(whitespace-empty ((t nil)))
