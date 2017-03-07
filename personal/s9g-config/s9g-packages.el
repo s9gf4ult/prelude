@@ -31,6 +31,7 @@
 (windmove-default-keybindings)
 (setq framemove-hook-into-windmove t)
 
+(prelude-require-package 'expand-region)
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'haskell-snippets)
 (prelude-require-package 'hyai)
