@@ -64,9 +64,18 @@
 (add-hook
  'haskell-cabal-mode-hook 's9g-cabal-mode-hook)
 
+(defun hemmet-expand-region ()
+  (interactive)
+  (let ((f (lambda (b e)
+             (shell-command-on-region
+              b e "hemmet" t t "*hemmet error*" t))))
+    (if (region-active-p)
+        (funcall f (region-beginning) (region-end))
+      (funcall f (line-beginning-position) (line-end-position)))
+    ))
+
 (defun s9g-haskell-mode-hook ()
   (yas-minor-mode 1)
-  (hyai-mode)
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
   (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj)
   (local-set-key
@@ -79,6 +88,7 @@
   (local-set-key (kbd "<S-return>") 'haskell-end-of-line-and-indent)
   (local-set-key (kbd "<M-S-up>") 'move-text-up)
   (local-set-key (kbd "<M-S-down>") 'move-text-down)
+  (local-set-key (kbd "C-c C-j") 'hemmet-expand-region)
   (haskell-indentation-mode +1)
   (s9g-haskell-set-buffer-name)
   (sp-pair "'" nil :actions :rem)

@@ -26,10 +26,12 @@
  '(flycheck-ghc-language-extensions
    (quote
     ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
+ '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command
    "stack test $(basename %s) --fast --ghc-options=-ferror-spans --ghc-options=-Werror --no-run-tests")
  '(haskell-compile-cabal-build-command
    "stack test $(basename %s) --fast --ghc-options=-ferror-spans --no-run-tests")
+ '(haskell-process-args-stack-ghci (quote ("--ghci-options" "-ferror-spans")))
  '(helm-ag-insert-at-point (quote word))
  '(helm-autoresize-mode t)
  '(helm-buffer-details-flag nil)

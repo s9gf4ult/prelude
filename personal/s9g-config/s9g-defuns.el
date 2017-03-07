@@ -168,6 +168,17 @@ non-nil result.  ALIST is passed down to
                      (region-end))
     (kill-whole-line lines-count)))
 
+(defun kill-comment-region ()
+  (interactive)
+  (if (region-active-p)
+      (save-excursion
+        (let* ((beg (line-number-at-pos (region-beginning)))
+               (end (line-number-at-pos (region-end)))
+               (dif (- end beg)))
+          (goto-char (region-beginning))
+          (comment-kill dif)))
+    (comment-kill 1)))
+
 (defun split-window-sensibly-reversed (&optional window)
   "Same as split-window-sensibly but with reversed logic about
   horizontal/vertical split."
@@ -190,6 +201,15 @@ non-nil result.  ALIST is passed down to
                  (with-selected-window window
                    (split-window-below))))))))
 
+(defun insert-commented-keyword (field)
+  (interactive)
+  (comment-dwim nil)
+  (unless (looking-at (format "%s:" field))
+    (insert (format " %s: " field)))
+  (progn
+    (delete-trailing-whitespace)
+    (end-of-line)
+    (insert " ")))
 
 (provide 's9g-defuns)
 ;;; s9g-defuns.el ends here

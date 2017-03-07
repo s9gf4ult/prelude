@@ -47,6 +47,18 @@
 (global-set-key (kbd "M-/") 'helm-dabbrev)
 (global-set-key (kbd "C-c l") 'locate-key-binding)
 
+(global-set-key
+ (kbd "C-c T")
+ '(lambda ()
+    (interactive)
+    (insert-commented-keyword "TODO")))
+
+(global-set-key
+ (kbd "C-c F")
+ '(lambda ()
+    (interactive)
+    (insert-commented-keyword "FIXME")))
+
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (provide 's9g-globals)
