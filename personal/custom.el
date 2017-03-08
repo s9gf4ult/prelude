@@ -26,6 +26,7 @@
  '(flycheck-ghc-language-extensions
    (quote
     ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
+ '(flycheck-global-modes nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command
    "stack test $(basename %s) --fast --ghc-options=-ferror-spans --ghc-options=-Werror --no-run-tests")
