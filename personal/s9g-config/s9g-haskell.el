@@ -57,6 +57,28 @@
       (neotree-hide)
     (neo-global--open-dir (haskell-cabal-find-dir))))
 
+(defun s9g-haskell-yesod-handler-name ()
+  (interactive)
+  (let* ((p1 (line-beginning-position))
+         (p2 (line-end-position))
+         (lval (buffer-substring-no-properties p1 p2))
+         (w (cdr (split-string lval)))  ; split to words and drop routes
+         (rname (car w))
+         (methods (cdr w)))
+    (if (> (length methods) 0)
+        (progn
+          (kill-whole-line)
+          (previous-line)
+          (loop for m in methods do
+                (let* ((name (concat (downcase m) rname))
+                       (l1 (concat name " :: Handler TypedContent"))
+                       (l2 (concat name " = error \"" name " not implemented\"")))
+                  (end-of-line)
+                  (newline)
+                  (insert l1) (newline)
+                  (insert l2) (newline)))))))
+
+
 (defun s9g-cabal-mode-hook ()
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
   (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj))
