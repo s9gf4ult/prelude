@@ -28,8 +28,6 @@
 (require 'neotree)
 (require 'yasnippet)
 (require 'haskell-snippets)
-(require 'hyai)
-;; (require 'intero)
 
 (defun haskell-end-of-line-and-indent (arg)
   (interactive "p")
