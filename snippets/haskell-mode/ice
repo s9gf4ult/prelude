@@ -2,4 +2,4 @@
 # name: ice
 # key: ice
 # --
-import Control.Monad.Except
+import Control.Exception
