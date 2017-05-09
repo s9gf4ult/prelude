@@ -116,7 +116,8 @@
  '(split-width-threshold 100)
  '(split-window-preferred-function (quote split-window-sensibly-reversed))
  '(tags-table-list nil)
- '(woman-fill-frame t))
+ '(woman-fill-frame t)
+ '(yas-indent-line (quote fixed)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
