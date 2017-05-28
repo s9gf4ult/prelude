@@ -29,6 +29,7 @@
 (require 'yasnippet)
 (require 'haskell-snippets)
 
+
 (defun haskell-end-of-line-and-indent (arg)
   (interactive "p")
   (end-of-line)
@@ -113,6 +114,8 @@
   (s9g-haskell-set-buffer-name)
   (sp-pair "'" nil :actions :rem)
   )
+
+(add-hook 'haskell-mode-hook 'intero-mode)
 
 (add-hook
  'haskell-mode-hook 's9g-haskell-mode-hook)

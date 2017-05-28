@@ -48,9 +48,7 @@
 
 (prelude-require-package 'web-mode)
 
-;; (prelude-require-package 'color-theme)
-;; (require 'color-theme)
-;; (load-theme 'xemacs)
+(prelude-require-package 'intero)
 
 (provide 's9g-packages)
 ;;; s9g-packages.el ends here

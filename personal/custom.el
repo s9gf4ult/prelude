@@ -23,6 +23,7 @@
      (".*"
       (display-buffer-reuse-window display-buffer-pop-up-window display-buffer-use-some-window)
       (reusable-frames . t)))))
+ '(flycheck-display-errors-delay 10)
  '(flycheck-ghc-language-extensions
    (quote
     ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
