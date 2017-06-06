@@ -115,8 +115,6 @@
   (sp-pair "'" nil :actions :rem)
   )
 
-(add-hook 'haskell-mode-hook 'intero-mode)
-
 (add-hook
  'haskell-mode-hook 's9g-haskell-mode-hook)
 
