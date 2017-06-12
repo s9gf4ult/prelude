@@ -115,6 +115,8 @@
   (sp-pair "'" nil :actions :rem)
   )
 
+(add-hook 'haskell-mode-hook 'intero-mode-whitelist)
+
 (add-hook
  'haskell-mode-hook 's9g-haskell-mode-hook)
 
