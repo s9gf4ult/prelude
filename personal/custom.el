@@ -46,7 +46,7 @@
  '(hyai-basic-offset 2)
  '(intero-whitelist
    (quote
-    ("/mnt/st4000/home/razor/work/redozubov/contractor/b2b/backend")))
+    ("~/work/antorica/contractor/b2b/backend" "~/tmp/credit")))
  '(js-indent-level 2)
  '(json-reformat:indent-width 2)
  '(magit-commit-show-diff nil)
