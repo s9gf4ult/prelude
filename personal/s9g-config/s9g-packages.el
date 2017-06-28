@@ -50,5 +50,7 @@
 
 (prelude-require-package 'intero)
 
+(prelude-require-package 'markdown-mode)
+
 (provide 's9g-packages)
 ;;; s9g-packages.el ends here
