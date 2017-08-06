@@ -110,6 +110,7 @@
      ("~/pers/projects/credit/credit.org" :level . 1))))
  '(org-reverse-note-order t)
  '(prelude-auto-save nil)
+ '(prelude-flyspell nil)
  '(recentf-mode nil)
  '(scroll-bar-mode nil)
  '(sp-escape-wrapped-region nil)
