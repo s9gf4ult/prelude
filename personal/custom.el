@@ -44,9 +44,7 @@
     (helm-source-buffers-list helm-source-buffer-not-found)))
  '(helm-turn-on-recentf nil)
  '(hyai-basic-offset 2)
- '(intero-whitelist
-   (quote
-    ("~/work/antorica/contractor/b2b/backend" "~/tmp/credit")))
+ '(intero-whitelist (quote ("~/tmp/credit")))
  '(js-indent-level 2)
  '(json-reformat:indent-width 2)
  '(magit-commit-show-diff nil)
