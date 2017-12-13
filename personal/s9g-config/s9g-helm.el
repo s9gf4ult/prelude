@@ -26,6 +26,8 @@
 
 (require 'helm)
 
+(helm-mode 1)
+
 ; (define-key helm-etags-map (kbd "<C-return>") 'helm-etags-run-switch-other-window)
 (define-key helm-map (kbd "<C-return>") 'helm-buffer-switch-other-window)
 
