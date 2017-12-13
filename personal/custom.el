@@ -110,6 +110,7 @@
  '(prelude-auto-save nil)
  '(prelude-flyspell nil)
  '(recentf-mode nil)
+ '(safe-local-variable-values (quote ((flycheck-disabled-checkers emacs-lisp-checkdoc))))
  '(scroll-bar-mode nil)
  '(sp-escape-wrapped-region nil)
  '(split-height-threshold nil)

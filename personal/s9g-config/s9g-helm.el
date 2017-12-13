@@ -26,8 +26,15 @@
 
 (require 'helm)
 
-(define-key helm-etags-map (kbd "<C-return>") 'helm-etags-run-switch-other-window)
+; (define-key helm-etags-map (kbd "<C-return>") 'helm-etags-run-switch-other-window)
 (define-key helm-map (kbd "<C-return>") 'helm-buffer-switch-other-window)
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-c h x") 'helm-do-ag-project-root)
+(global-set-key (kbd "C-c h g") 'helm-do-ag)
+(global-set-key (kbd "M-/") 'helm-dabbrev)
+
 
 (provide 's9g-helm)
 ;;; s9g-helm.el ends here

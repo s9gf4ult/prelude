@@ -45,6 +45,8 @@
 (prelude-require-package 'ag)
 
 (prelude-require-package 'helm-dash)
+(prelude-require-package 'helm-projectile)
+(prelude-require-package 'helm-ag)
 
 (prelude-require-package 'web-mode)
 
