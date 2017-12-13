@@ -34,6 +34,7 @@
 (global-set-key (kbd "C-c h x") 'helm-do-ag-project-root)
 (global-set-key (kbd "C-c h g") 'helm-do-ag)
 (global-set-key (kbd "M-/") 'helm-dabbrev)
+(global-set-key (kbd "M-.") 'helm-etags-select)
 
 
 (provide 's9g-helm)
