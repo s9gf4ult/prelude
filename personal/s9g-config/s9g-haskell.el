@@ -97,7 +97,6 @@
 
 (defun s9g-haskell-mode-hook ()
   (yas-minor-mode 1)
-  (smartparens-mode 1)
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
   (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj)
   (local-set-key
@@ -113,7 +112,9 @@
   (local-set-key (kbd "C-c C-j") 'hemmet-expand-region)
   (haskell-indentation-mode +1)
   (s9g-haskell-set-buffer-name)
+  (smartparens-mode 1)
   (sp-pair "'" nil :actions :rem)
+  (add-to-list 'write-file-functions 'delete-trailing-whitespace)
   )
 
 (add-hook 'haskell-mode-hook 'intero-mode-whitelist)
