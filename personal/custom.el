@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
+ '(before-save-hook (quote (delete-trailing-whitespace)))
  '(clean-buffer-list-delay-general 30)
  '(company-dabbrev-downcase nil)
  '(dabbrev-case-distinction nil)
