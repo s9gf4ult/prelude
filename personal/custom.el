@@ -31,9 +31,9 @@
  '(flycheck-global-modes nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command
-   "stack test $(basename %s) --fast --pedantic --ghc-options=-ferror-spans --ghc-options=\"-j +RTS -A128m -n2m -RTS\" --no-run-tests")
+   "nice -n5 stack test $(basename %s) --fast --pedantic --ghc-options=-ferror-spans --ghc-options=\"-j +RTS -A128m -n2m -qb0 -RTS\" --no-run-tests")
  '(haskell-compile-cabal-build-command
-   "stack test $(basename %s) --fast --ghc-options=-ferror-spans --ghc-options=\"-j +RTS -A128m -n2m -RTS\" --no-run-tests")
+   "nice -n5 stack test $(basename %s) --fast --ghc-options=-ferror-spans --ghc-options=\"-j +RTS -A128m -n2m -qb0 -RTS\" --no-run-tests")
  '(haskell-process-args-stack-ghci (quote ("--ghci-options" "-ferror-spans")))
  '(helm-ag-insert-at-point (quote word))
  '(helm-autoresize-mode t)
