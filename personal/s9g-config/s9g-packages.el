@@ -50,7 +50,7 @@
 
 (prelude-require-package 'web-mode)
 
-(prelude-require-package 'intero)
+(prelude-require-package 'dockerfile-mode)
 
 (prelude-require-package 'markdown-mode)
 
