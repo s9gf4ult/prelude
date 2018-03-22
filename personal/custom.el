@@ -36,7 +36,7 @@
    "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --ghc-options=\"-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS\" $(basename %s)")
  '(haskell-process-args-stack-ghci (quote ("--ghci-options" "-ferror-spans")))
  '(helm-ag-insert-at-point (quote word))
- '(helm-autoresize-mode t)
+ '(helm-autoresize-mode nil)
  '(helm-buffer-details-flag nil)
  '(helm-buffer-max-length 80)
  '(helm-etags-execute-action-at-once-if-one nil)
