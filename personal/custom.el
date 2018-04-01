@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
  '(before-save-hook (quote (delete-trailing-whitespace)))
+ '(case-fold-search nil)
  '(clean-buffer-list-delay-general 30)
  '(company-dabbrev-downcase nil)
  '(dabbrev-case-distinction nil)
