@@ -43,6 +43,25 @@
     (unless (string-equal "" modname)
       (rename-buffer modname t))))
 
+(defcustom s9g-haskell-compile-cabal-build-command
+  "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS'"
+  "Compile all cabal command"
+  :type 'string
+  )
+
+(defcustom s9g-haskell-compile-cabal-build-alt-command
+  "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --pedantic --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS'"
+  "Compile all cabal command"
+  :type 'string
+  )
+
+
+(defun s9g-haskell-compile-all (&optional alt)
+  (interactive "P")
+  (let ((haskell-compile-cabal-build-command s9g-haskell-compile-cabal-build-command)
+        (haskell-compile-cabal-build-alt-command s9g-haskell-compile-cabal-build-alt-command))
+    (s9g-haskell-compile alt)))
+
 (defun s9g-haskell-compile (&optional alt)
   (interactive "P")
   (save-some-buffers t)
@@ -98,6 +117,7 @@
 (defun s9g-haskell-mode-hook ()
   (yas-minor-mode 1)
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
+  (local-set-key (kbd "<f6>") 's9g-haskell-compile-all)
   (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj)
   (local-set-key
    (kbd "<f9>")
