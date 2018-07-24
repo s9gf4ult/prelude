@@ -99,6 +99,7 @@
 
 (defun s9g-cabal-mode-hook ()
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
+  (local-set-key (kbd "<f6>") 's9g-haskell-compile-all)
   (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj))
 
 (add-hook
