@@ -33,9 +33,9 @@
  '(flycheck-global-modes nil)
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command
-   "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --pedantic --ghc-options=\"-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS\" $(basename %s)")
+   "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --pedantic --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS' $(basename %s)")
  '(haskell-compile-cabal-build-command
-   "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --ghc-options=\"-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS\" $(basename %s)")
+   "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --ghc-options='-ferror-spans -instances -j +RTS -A128m -n2m -qb0 -RTS' $(basename %s)")
  '(haskell-process-args-stack-ghci (quote ("--ghci-options" "-ferror-spans")))
  '(helm-ag-insert-at-point (quote word))
  '(helm-autoresize-mode nil)
@@ -115,6 +115,8 @@
  '(recentf-mode nil)
  '(safe-local-variable-values (quote ((flycheck-disabled-checkers emacs-lisp-checkdoc))))
  '(scroll-bar-mode nil)
+ '(sh-basic-offset 2)
+ '(sh-indentation 2)
  '(sp-escape-wrapped-region nil)
  '(split-height-threshold nil)
  '(split-width-threshold 100)
