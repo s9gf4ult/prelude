@@ -50,6 +50,7 @@
  '(intero-whitelist (quote ("~/tmp/credit")))
  '(js-indent-level 2)
  '(json-reformat:indent-width 2)
+ '(kill-ring-max 1000)
  '(magit-commit-show-diff nil)
  '(magit-diff-arguments
    (quote
