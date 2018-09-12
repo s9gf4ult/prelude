@@ -131,7 +131,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray80" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "1ASC" :family "Liberation Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray77" :foreground "gray17" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 121 :width normal :foundry "1ASC" :family "Liberation Mono"))))
  '(cursor ((t (:background "OrangeRed2"))))
  '(diff-added ((t (:foreground "green4"))))
  '(diff-context ((t (:inherit shadow :foreground "gray32"))))
@@ -145,13 +145,14 @@
  '(font-lock-function-name-face ((t (:foreground "medium blue"))))
  '(font-lock-keyword-face ((t (:foreground "dark red"))))
  '(font-lock-string-face ((t (:foreground "dark green"))))
+ '(font-lock-type-face ((t (:foreground "dark green"))))
  '(font-lock-variable-name-face ((t (:foreground "dark magenta"))))
  '(haskell-constructor-face ((t (:foreground "dark slate blue"))))
  '(haskell-indentation-show-hl-line-face ((t nil)))
  '(highlight ((t (:background "gray75"))))
  '(isearch ((t (:background "magenta3" :foreground "dark slate gray"))))
- '(magit-diff-added ((t (:foreground "#22aa22"))))
- '(magit-diff-added-highlight ((t (:background "gray84" :foreground "#22aa22"))))
+ '(magit-diff-added ((t (:foreground "dark green"))))
+ '(magit-diff-added-highlight ((t (:background "gray84" :foreground "dark green"))))
  '(magit-diff-context-highlight ((t (:background "gray84" :foreground "grey50"))))
  '(magit-diff-removed ((t (:foreground "#aa2222"))))
  '(magit-diff-removed-highlight ((t (:background "gray84" :foreground "#aa2222"))))
