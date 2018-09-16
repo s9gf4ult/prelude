@@ -123,6 +123,8 @@
  '(split-width-threshold 100)
  '(split-window-preferred-function (quote split-window-sensibly-reversed))
  '(tags-table-list nil)
+ '(whitespace-global-modes nil)
+ '(whitespace-style (quote (face trailing tabs empty)))
  '(woman-fill-frame t)
  '(yas-indent-line (quote fixed)))
 
