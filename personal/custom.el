@@ -142,7 +142,7 @@
  '(diff-hl-delete ((t (:inherit diff-removed :background "red2" :foreground "red3"))))
  '(diff-hl-insert ((t (:inherit diff-added :background "lime green" :foreground "green4"))))
  '(diff-removed ((t (:foreground "red3"))))
- '(font-lock-comment-face ((t (:foreground "gray53"))))
+ '(font-lock-comment-face ((t (:foreground "gray43"))))
  '(font-lock-doc-face ((t (:foreground "gray39"))))
  '(font-lock-function-name-face ((t (:foreground "medium blue"))))
  '(font-lock-keyword-face ((t (:foreground "dark red"))))
