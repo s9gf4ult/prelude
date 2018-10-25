@@ -56,7 +56,7 @@
        (interactive)
        (let ((w (nth (- idx 1) (aw-window-list))))
          (unless (null w)
-           (select-window w)))))))
+           (aw-switch-to-window w)))))))
 
 (global-set-key
  (kbd "C-c T")
