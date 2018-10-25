@@ -47,6 +47,17 @@
 (global-set-key (kbd "C-c l") 'locate-key-binding)
 (global-set-key (kbd "M-*") 'pop-tag-mark)
 
+(dotimes (i 8)
+  (lexical-let* ((idx (+ 1 i))
+                 (key (kbd (format "C-%d" idx))))
+    (global-set-key
+     key
+     (lambda ()
+       (interactive)
+       (let ((w (nth (- idx 1) (aw-window-list))))
+         (unless (null w)
+           (select-window w)))))))
+
 (global-set-key
  (kbd "C-c T")
  '(lambda ()

@@ -26,17 +26,13 @@
 
 (prelude-require-package 'neotree)
 
-(prelude-require-package 'framemove)
-(require 'framemove)
 (windmove-default-keybindings)
-(setq framemove-hook-into-windmove t)
 
 (prelude-require-package 'expand-region)
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'haskell-snippets)
 (prelude-require-package 'flycheck-haskell)
 
-(prelude-require-packages '(fit-frame frame-fns misc-fns))
 (require 'compile+)
 
 (prelude-require-package 'nginx-mode)
