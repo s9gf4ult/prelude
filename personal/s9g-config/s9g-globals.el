@@ -54,7 +54,10 @@
      key
      (lambda ()
        (interactive)
-       (let ((w (nth (- idx 1) (aw-window-list))))
+       (let* ((wlist (aw-window-list))
+              (w (or
+                  (nth (- idx 1) wlist)
+                  (car (last wlist)))))
          (unless (null w)
            (aw-switch-to-window w)))))))
 
