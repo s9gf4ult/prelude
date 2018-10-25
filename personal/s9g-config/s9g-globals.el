@@ -30,7 +30,7 @@
 (global-set-key (kbd "<f12>") 'neotree-toggle)
 (global-set-key (kbd "<f7>") 'helm-mini)
 (global-set-key (kbd "<f8>") 'helm-projectile)
-(global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "C-c b") 'org-switchb)
 
 (global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
 (global-set-key (kbd "C-S-c") 'copy-region-as-kill)
@@ -60,6 +60,9 @@
                   (car (last wlist)))))
          (unless (null w)
            (aw-switch-to-window w)))))))
+
+(global-set-key (kbd "<S-left>") #'aw-switch-prev-window)
+(global-set-key (kbd "<S-right>") #'aw-switch-next-window)
 
 (global-set-key
  (kbd "C-c T")

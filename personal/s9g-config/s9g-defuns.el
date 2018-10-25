@@ -211,5 +211,25 @@ non-nil result.  ALIST is passed down to
     (end-of-line)
     (insert " ")))
 
+(defun aw-switch-relative-window (newidx)
+  (let* ((w (selected-window))
+         (wlist (aw-window-list))
+         (idx (cl-position w wlist))
+         (prev-w (nth (funcall newidx idx) wlist)))
+    (unless (null prev-w)
+      (aw-switch-to-window prev-w))))
+
+(defun aw-switch-prev-window ()
+  (interactive)
+  (aw-switch-relative-window
+   (lambda (idx)
+     (max 0 (- idx 1)))))
+
+(defun aw-switch-next-window ()
+  (interactive)
+  (aw-switch-relative-window
+   (lambda (idx)
+     (+ idx 1))))
+
 (provide 's9g-defuns)
 ;;; s9g-defuns.el ends here

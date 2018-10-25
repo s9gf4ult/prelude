@@ -26,8 +26,6 @@
 
 (prelude-require-package 'neotree)
 
-(windmove-default-keybindings)
-
 (prelude-require-package 'expand-region)
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'haskell-snippets)
