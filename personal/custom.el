@@ -13,19 +13,16 @@
  '(dabbrev-case-fold-search nil)
  '(dabbrev-case-replace nil)
  '(dabbrev-upcase-means-case-search t)
+ '(desktop-save t)
  '(display-buffer-alist
    (quote
-    (("widget-choose" ignore
+    (("\\*haskell-compilation\\*" display-buffer-reuse-window
       (nil))
-     ("\\*helm.*\\*" ignore
+     ("\\*NeoTree\\*" display-buffer-pop-up-window
       (nil))
-     ("\\*magit-.*-popup\\*" ignore
-      (nil))
-     ("\\*NeoTree\\*" ignore
-      (nil))
-     (".*"
-      (display-buffer-reuse-window display-buffer-pop-up-window display-buffer-use-some-window)
-      (reusable-frames . t)))))
+     (".*" display-buffer-same-window
+      (nil)))))
+ '(display-buffer-reuse-frames nil)
  '(flycheck-display-errors-delay 10)
  '(flycheck-ghc-language-extensions
    (quote
@@ -45,12 +42,14 @@
  '(helm-mini-default-sources
    (quote
     (helm-source-buffers-list helm-source-buffer-not-found)))
+ '(helm-split-window-default-side (quote same))
  '(helm-turn-on-recentf nil)
  '(hyai-basic-offset 2)
  '(intero-whitelist (quote ("~/tmp/credit")))
  '(js-indent-level 2)
  '(json-reformat:indent-width 2)
  '(kill-ring-max 1000)
+ '(magit-branch-arguments nil)
  '(magit-commit-show-diff nil)
  '(magit-diff-arguments
    (quote

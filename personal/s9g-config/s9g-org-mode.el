@@ -29,8 +29,8 @@
 
 (defun s9g-org-hook ()
   (auto-fill-mode 1)
-  (local-set-key (kbd "<S-left>") #'windmove-left)
-  (local-set-key (kbd "<S-right>") #'windmove-right)
+  (local-set-key (kbd "<S-left>") #'aw-switch-prev-window)
+  (local-set-key (kbd "<S-right>") #'aw-switch-next-window)
   (local-set-key (kbd "<S-up>") #'windmove-up)
   (local-set-key (kbd "<S-down>") #'windmove-down)
   (local-set-key (kbd "<M-S-return>") 'org-insert-todo-heading-respect-content)

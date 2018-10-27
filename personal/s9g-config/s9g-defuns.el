@@ -25,6 +25,7 @@
 
 ;;; Code:
 
+(require 'ace-window)
 
 (defun uniq-lines (beg end)
   "Unique lines in region.
