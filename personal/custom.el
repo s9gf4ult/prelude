@@ -17,11 +17,13 @@
  '(display-buffer-alist
    (quote
     (("\\*haskell-compilation\\*" display-buffer-reuse-window
-      (nil))
-     ("\\*NeoTree\\*" display-buffer-pop-up-window
+      (reusable-frames . t))
+     ("magit.*" display-buffer-pop-up-window
+      (reusable-frames . t))
+     ("\\*NeoTree\\*" ignore
       (nil))
      (".*" display-buffer-same-window
-      (nil)))))
+      (reusable-frames . t)))))
  '(display-buffer-reuse-frames nil)
  '(flycheck-display-errors-delay 10)
  '(flycheck-ghc-language-extensions
@@ -55,6 +57,7 @@
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
  '(midnight-mode t nil (midnight))
+ '(neo-smart-open t)
  '(nxml-child-indent 2)
  '(org-agenda-files
    (quote

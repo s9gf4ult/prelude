@@ -35,6 +35,7 @@
 (global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
 (global-set-key (kbd "C-S-c") 'copy-region-as-kill)
 (global-set-key (kbd "C-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-S-y") 'yank)
 (global-set-key (kbd "M-\\") 'delete-horizontal-and-surround-space)
 (global-set-key (kbd "C-j") 'join-line)
 (global-set-key (kbd "C-S-j") 'crux-top-join-line)
@@ -63,6 +64,8 @@
 
 (global-set-key (kbd "<S-left>") #'aw-switch-prev-window)
 (global-set-key (kbd "<S-right>") #'aw-switch-next-window)
+
+(global-set-key (kbd "C-x x") 'first-error)
 
 (global-set-key
  (kbd "C-c T")
