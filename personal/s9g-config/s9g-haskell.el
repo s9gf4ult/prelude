@@ -44,13 +44,13 @@
       (rename-buffer modname t))))
 
 (defcustom s9g-haskell-compile-cabal-build-command
-  "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS'"
+  "nice -n5 stack build / --bench --test --no-run-tests --no-run-benchmarks --fast --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS'"
   "Compile all cabal command"
   :type 'string
   )
 
 (defcustom s9g-haskell-compile-cabal-build-alt-command
-  "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --pedantic --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS'"
+  "nice -n5 stack build / --bench --test --no-run-tests --no-run-benchmarks --fast --pedantic --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS'"
   "Compile all cabal command"
   :type 'string
   )
