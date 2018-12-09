@@ -94,13 +94,13 @@
       :prepend t)
      ("l" "Log entry")
      ("ll" "Simple log entry" entry
-      (file+datetree "~/pers/projects/life/log/log.org")
+      (file+olp+datetree "~/pers/projects/life/log/log.org")
       "* %?")
      ("lh" "Health log" entry
-      (file+datetree "~/pers/projects/life/log/health.org")
+      (file+olp+datetree "~/pers/projects/life/log/health.org")
       "* %?")
      ("lm" "Mother log" entry
-      (file+datetree "~/pers/projects/life/log/mother.org")
+      (file+olp+datetree "~/pers/projects/life/log/mother.org")
       "* %? ")
      ("u" "Url" entry
       (file+headline "~/pers/urls.org" "Urls")
