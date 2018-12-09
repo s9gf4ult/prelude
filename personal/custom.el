@@ -72,6 +72,10 @@
       (file+headline "~/pers/capture.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/todo")
       :prepend t)
+     ("tr" "Travel check list" entry
+      (file+headline "~/pers/capture.org " "Tasks ")
+      (file "~/.emacs.d/personal/org-templates/travel")
+      :prepend t)
      ("ts" "Scheduled todo item" entry
       (file+headline "~/pers/capture.org" "Tasks")
       (file "~/.emacs.d/personal/org-templates/scheduled")
