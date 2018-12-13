@@ -48,5 +48,7 @@
 
 (prelude-require-package 'markdown-mode)
 
+(prelude-require-package 'direnv)
+
 (provide 's9g-packages)
 ;;; s9g-packages.el ends here
