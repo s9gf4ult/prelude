@@ -46,6 +46,14 @@ BEG and END (region to sort)."
             (replace-match "" nil nil))
           (goto-char next-line))))))
 
+(defun unfill-region (beg end)
+  "Unfill the region, joining text paragraphs into a single
+    logical line.  This is useful, e.g., for use with
+    `visual-line-mode'."
+  (interactive "*r")
+  (let ((fill-column (point-max)))
+    (fill-region beg end)))
+
 (defun key-binding-at-point (key)
   (mapcar (lambda (keymap) (when (keymapp keymap)
                              (lookup-key keymap key)))
