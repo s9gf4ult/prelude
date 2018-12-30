@@ -36,6 +36,7 @@
  '(haskell-compile-cabal-build-command
    "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --ghc-options='-ferror-spans -instances -j +RTS -A128m -n2m -qb0 -RTS' $(basename %s)")
  '(haskell-process-args-stack-ghci (quote ("--ghci-options" "-ferror-spans")))
+ '(haskell-stylish-on-save t)
  '(helm-ag-insert-at-point (quote word))
  '(helm-autoresize-mode nil)
  '(helm-buffer-details-flag nil)
