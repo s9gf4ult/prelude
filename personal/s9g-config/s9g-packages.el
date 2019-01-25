@@ -48,6 +48,7 @@
 
 (prelude-require-package 'markdown-mode)
 
+(prelude-require-package 'nix-mode)
 (prelude-require-package 'direnv)
 
 (provide 's9g-packages)
