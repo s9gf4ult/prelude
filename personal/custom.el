@@ -58,6 +58,7 @@
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
  '(midnight-mode t nil (midnight))
+ '(neo-create-file-auto-open t)
  '(neo-smart-open t)
  '(nix-indent-function (quote nix-indent-line))
  '(nxml-child-indent 2)
