@@ -69,11 +69,24 @@
       (haskell-compile '-)
     (haskell-compile)))
 
-(defun haskell-neotree-open-proj ()
+(defun haskell-neotree-toggle-proj ()
   (interactive)
   (if (neo-global--window-exists-p)
       (neotree-hide)
-    (neo-global--open-dir (haskell-cabal-find-dir))))
+    (haskell-neotree-show)))
+
+;;;###autoload
+(defun haskell-neotree-show ()
+  "Show the NeoTree window."
+  (interactive)
+  (let ((cw (selected-window))
+        (path (buffer-file-name)))  ;; save current window and buffer
+    (neotree-dir (haskell-cabal-find-dir))
+    (neotree-find path)
+    (neo-global--select-window)
+    (when neo-toggle-window-keep-p
+      (select-window cw))))
+
 
 (defun s9g-haskell-yesod-handler-name ()
   (interactive)
@@ -100,7 +113,7 @@
 (defun s9g-cabal-mode-hook ()
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
   (local-set-key (kbd "<f6>") 's9g-haskell-compile-all)
-  (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj))
+  (local-set-key (kbd "<f12>") 'haskell-neotree-toggle-proj))
 
 (add-hook
  'haskell-cabal-mode-hook 's9g-cabal-mode-hook)
@@ -119,7 +132,7 @@
   (yas-minor-mode 1)
   (local-set-key (kbd "<f5>") 's9g-haskell-compile)
   (local-set-key (kbd "<f6>") 's9g-haskell-compile-all)
-  (local-set-key (kbd "<f12>") 'haskell-neotree-open-proj)
+  (local-set-key (kbd "<f12>") 'haskell-neotree-toggle-proj)
   (local-set-key
    (kbd "<f9>")
    #'(lambda ()
