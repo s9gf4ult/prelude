@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
- '(before-save-hook (quote (delete-trailing-whitespace)))
+ '(before-save-hook nil)
  '(calendar-week-start-day 1)
  '(case-fold-search nil)
  '(clean-buffer-list-delay-general 30)
@@ -125,6 +125,7 @@
  '(prelude-flyspell nil)
  '(proof-auto-raise-buffers nil)
  '(proof-three-window-enable nil)
+ '(proof-autosend-enable nil)
  '(recentf-mode nil)
  '(safe-local-variable-values (quote ((flycheck-disabled-checkers emacs-lisp-checkdoc))))
  '(scroll-bar-mode nil)
