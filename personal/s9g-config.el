@@ -33,7 +33,7 @@
 (require 's9g-globals)
 
 (winner-mode 1)
-(desktop-save-mode 1)
+;; (desktop-save-mode 1)
 
 (provide 's9g-config)
 ;;; s9g-config.el ends here

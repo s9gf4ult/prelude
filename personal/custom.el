@@ -58,6 +58,7 @@
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
  '(midnight-mode t nil (midnight))
+ '(mouse-yank-at-point t)
  '(neo-create-file-auto-open t)
  '(neo-smart-open t)
  '(nix-indent-function (quote nix-indent-line))
@@ -122,6 +123,8 @@
  '(org-reverse-note-order t)
  '(prelude-auto-save nil)
  '(prelude-flyspell nil)
+ '(proof-auto-raise-buffers nil)
+ '(proof-three-window-enable nil)
  '(recentf-mode nil)
  '(safe-local-variable-values (quote ((flycheck-disabled-checkers emacs-lisp-checkdoc))))
  '(scroll-bar-mode nil)
