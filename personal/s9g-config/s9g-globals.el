@@ -31,6 +31,8 @@
 (global-set-key (kbd "<f7>") 'helm-mini)
 (global-set-key (kbd "<f8>") 'helm-projectile)
 (global-set-key (kbd "C-c b") 'org-switchb)
+(global-unset-key (kbd "C-c h x"))
+(global-set-key (kbd "C-c h x") 'helm-projectile-rg)
 
 (global-set-key (kbd "C-S-k") 'crux-kill-whole-line)
 (global-set-key (kbd "C-S-c") 'copy-region-as-kill)

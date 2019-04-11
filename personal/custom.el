@@ -48,6 +48,7 @@
  '(helm-split-window-default-side (quote same))
  '(helm-turn-on-recentf nil)
  '(hyai-basic-offset 2)
+ '(intero-global-mode nil nil (intero))
  '(intero-whitelist (quote ("~/tmp/credit")))
  '(js-indent-level 2)
  '(json-reformat:indent-width 2)
