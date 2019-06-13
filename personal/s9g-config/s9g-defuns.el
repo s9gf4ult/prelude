@@ -229,6 +229,32 @@ non-nil result.  ALIST is passed down to
                  (with-selected-window window
                    (split-window-below))))))))
 
+
+(defun fit-window-to-buffer-width (&optional window max-width min-width)
+  "Fit WINDOW according to its buffer's width.
+WINDOW, MAX-WIDTH and MIN-WIDTH have the same meaning as in
+`fit-window-to-buffer'."
+  (interactive)
+  (let ((fit-window-to-buffer-horizontally 'only))
+    (fit-window-to-buffer window nil nil max-width min-width)))
+
+(defun fit-window-to-buffer-height (&optional window max-height min-height)
+  "Fit WINDOW according to its buffer's height.
+WINDOW, MAX-HEIGHT and MIN-HEIGHT have the same meaning as in
+`fit-window-to-buffer'."
+  (interactive)
+  (let ((fit-window-to-buffer-horizontally nil))
+    (fit-window-to-buffer window max-height min-height nil nil)))
+
+(defun fit-window-to-buffer-height-or-width
+    (&optional window max-height min-height max-width min-width)
+  "Fit WINDOW according to its buffer's height and width.
+WINDOW, MAX-HEIGHT, MIN-HEIGHT, MAX-WIDTH and MIN-WIDTH have the same meaning
+as in `fit-window-to-buffer'."
+  (interactive)
+  (let ((fit-window-to-buffer-horizontally t))
+    (fit-window-to-buffer window max-height min-height max-width min-width)))
+
 (defun insert-commented-keyword (field)
   (interactive)
   (comment-dwim nil)
