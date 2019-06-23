@@ -58,6 +58,7 @@
  '(magit-diff-arguments
    (quote
     ("--stat" "--no-ext-diff" "--diff-algorithm=histogram")))
+ '(magit-log-margin (quote (t "%Y-%m-%d %H:%M " magit-log-margin-width t 18)))
  '(midnight-mode t nil (midnight))
  '(mouse-yank-at-point t)
  '(neo-create-file-auto-open t)
