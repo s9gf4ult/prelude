@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-insert-mode t)
- '(before-save-hook nil)
+ '(before-save-hook (quote (delete-trailing-whitespace)))
  '(calendar-week-start-day 1)
  '(case-fold-search nil)
  '(clean-buffer-list-delay-general 30)
