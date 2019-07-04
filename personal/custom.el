@@ -30,6 +30,7 @@
    (quote
     ("TemplateHaskell" "QuasiQuotes" "GADTs" "DataKinds" "OverloadedStrings" "RankNTypes" "TypeOperators")))
  '(flycheck-global-modes nil)
+ '(focus-follows-mouse (quote auto-raise))
  '(haskell-ask-also-kill-buffers nil)
  '(haskell-compile-cabal-build-alt-command
    "nice -n5 stack build --bench --test --no-run-tests --no-run-benchmarks --fast --pedantic --ghc-options='-ferror-spans -j +RTS -A128m -n2m -qb0 -RTS' $(basename %s)")
@@ -113,6 +114,7 @@
       :prepend t))))
  '(org-default-notes-file "~/pers/refile.org")
  '(org-extend-today-until 5)
+ '(org-log-done (quote time))
  '(org-refile-targets
    (quote
     (("~/pers/projects/life/todo/life.org" :level . 1)
@@ -126,8 +128,8 @@
  '(prelude-auto-save nil)
  '(prelude-flyspell nil)
  '(proof-auto-raise-buffers nil)
- '(proof-three-window-enable nil)
  '(proof-autosend-enable nil)
+ '(proof-three-window-enable nil)
  '(recentf-mode nil)
  '(safe-local-variable-values (quote ((flycheck-disabled-checkers emacs-lisp-checkdoc))))
  '(scroll-bar-mode nil)
@@ -137,6 +139,7 @@
  '(split-height-threshold nil)
  '(split-width-threshold 100)
  '(split-window-preferred-function (quote split-window-sensibly-reversed))
+ '(super-save-mode nil)
  '(tags-table-list nil)
  '(whitespace-global-modes nil)
  '(whitespace-style (quote (face trailing tabs empty)))
