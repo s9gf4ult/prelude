@@ -46,6 +46,7 @@
  '(helm-mini-default-sources
    (quote
     (helm-source-buffers-list helm-source-buffer-not-found)))
+ '(helm-rg-default-case-sensitivity (quote case-sensitive))
  '(helm-split-window-default-side (quote same))
  '(helm-turn-on-recentf nil)
  '(hyai-basic-offset 2)
