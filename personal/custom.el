@@ -14,6 +14,7 @@
  '(dabbrev-case-replace nil)
  '(dabbrev-upcase-means-case-search t)
  '(desktop-save t)
+ '(direnv-always-show-summary nil)
  '(display-buffer-alist
    (quote
     (("\\*haskell-compilation\\*" display-buffer-reuse-window
